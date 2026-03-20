@@ -67,6 +67,21 @@ st.sidebar.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
+st.sidebar.markdown("---")
+st.sidebar.markdown("""
+<div style="font-size:0.75rem; line-height:1.9; opacity:0.75">
+    <div style="font-weight:600; margin-bottom:6px; font-size:0.8rem">🛰️ Red SIEG OSINT</div>
+    <a href="https://mcasrom.github.io/sieg-osint" target="_blank"
+       style="display:block; color:#4ade80; text-decoration:none; margin-bottom:4px">🌐 Portal SIEG OSINT</a>
+    <a href="https://fake-news-narrative.streamlit.app" target="_blank"
+       style="display:block; color:#4ade80; text-decoration:none; margin-bottom:4px">📡 Narrative Radar</a>
+    <a href="https://sieg-radar-electoral.streamlit.app" target="_blank"
+       style="display:block; color:#4ade80; text-decoration:none; margin-bottom:4px">🗳️ España Vota 2026</a>
+    <a href="https://t.me/sieg_politica" target="_blank"
+       style="display:block; color:#4ade80; text-decoration:none">📢 Canal @sieg_politica</a>
+</div>
+""", unsafe_allow_html=True)
+st.sidebar.markdown("---")
 # Botón descarga PDF en sidebar
 import glob as _glob
 _reports = sorted(_glob.glob(os.path.join(BASE_DIR, "data", "reports", "*.pdf")), reverse=True)
