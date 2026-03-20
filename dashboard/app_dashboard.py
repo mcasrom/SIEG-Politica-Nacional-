@@ -390,6 +390,78 @@ with tab1:
 
     st.markdown("---")
 
+
+    # ---------------------------------------------------------
+    # MÉTRICAS DE VERACIDAD Y CONFIANZA
+    # ---------------------------------------------------------
+    st.subheader("🔍 Métricas de veracidad y confianza del sistema")
+    st.caption("Indicadores de calidad, completitud y fiabilidad de los datos · no evalúa veracidad de noticias individuales")
+
+    if not df_f.empty:
+        _total      = len(df_f)
+        _fuentes_n  = df_f["source"].nunique()
+        _partidos_n = df_f["partido"].nunique()
+
+        _pct_tema = df_f["temas"].apply(lambda x: str(x) not in ["otros","nan",""]).mean()*100 if "temas" in df_f.columns else 0
+        _pct_narr = df_f["narrativas"].apply(lambda x: str(x) not in ["ninguna","nan",""]).mean()*100 if "narrativas" in df_f.columns else 0
+        _pct_geo  = df_f["territorio"].apply(lambda x: str(x) not in ["","nan","None"]).mean()*100 if "territorio" in df_f.columns else 0
+        _pct_hash = df_f["hash_id"].apply(lambda x: str(x) not in ["","nan","None"]).mean()*100 if "hash_id" in df_f.columns else 0
+        _diversidad = min(_fuentes_n / 38 * 100, 100)
+
+        _dist = df_f["partido"].value_counts(normalize=True)
+        _n = len(_dist)
+        _gini = sum(abs(_dist.iloc[i] - _dist.iloc[j]) for i in range(_n) for j in range(_n)) / (2*_n) if _n > 1 else 0
+        _equilibrio = (1 - _gini) * 100
+
+        _indice = (_pct_hash*0.30 + _pct_tema*0.25 + _diversidad*0.20 + _pct_geo*0.10 + _pct_narr*0.10 + _equilibrio*0.05)
+        _ic = "🟢" if _indice >= 75 else ("🟠" if _indice >= 55 else "🔴")
+        _il = "Alto" if _indice >= 75 else ("Medio" if _indice >= 55 else "Bajo")
+
+        st.markdown(f"""
+<div style=\'padding:14px 18px; border:1px solid rgba(128,128,128,0.2);
+            border-radius:10px; margin-bottom:12px; background:rgba(128,128,128,0.03)\'>
+    <div style=\'font-size:0.72rem; font-weight:600; letter-spacing:0.1em;
+                text-transform:uppercase; opacity:0.45; margin-bottom:4px\'>
+        Índice de confianza del sistema
+    </div>
+    <div style=\'display:flex; align-items:center; gap:16px\'>
+        <div style=\'font-size:2.2rem; font-weight:700\'>{_ic} {_indice:.1f}</div>
+        <div>
+            <div style=\'font-size:0.95rem; font-weight:600\'>{_il} · sobre 100</div>
+            <div style=\'font-size:0.78rem; opacity:0.5\'>Integridad · Clasificación · Diversidad · Cobertura · Equilibrio</div>
+        </div>
+        <div style=\'margin-left:auto; font-size:0.8rem; opacity:0.45; text-align:right\'>{_total:,} noticias · {_fuentes_n} fuentes · {_partidos_n} partidos</div>
+    </div>
+    <div style=\'margin-top:10px; height:8px; background:rgba(128,128,128,0.12); border-radius:4px; overflow:hidden\'>
+        <div style=\'height:100%; width:{_indice:.1f}%; background:{"#2ca02c" if _indice>=75 else ("#ff7f0e" if _indice>=55 else "#d62728")}; border-radius:4px\'></div>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
+        _v1,_v2,_v3 = st.columns(3)
+        _v4,_v5,_v6 = st.columns(3)
+        _v1.metric("🔐 Integridad datos",    f"{_pct_hash:.1f}%",    "hash MD5 por noticia")
+        _v2.metric("🗂️ Clasificación",       f"{_pct_tema:.1f}%",    "noticias con tema")
+        _v3.metric("📡 Diversidad fuentes",  f"{_diversidad:.1f}%",  f"{_fuentes_n}/38 activas")
+        _v4.metric("🗺️ Cobertura geo",       f"{_pct_geo:.1f}%",     "con territorio")
+        _v5.metric("🌀 Narrativas",          f"{_pct_narr:.1f}%",    "con narrativa detectada")
+        _v6.metric("⚖️ Equilibrio político", f"{_equilibrio:.1f}%",  "distribución partidos")
+
+        with st.expander("ℹ️ Cómo interpretar estas métricas"):
+            st.markdown("""
+**Índice de confianza (0-100):** mide calidad y completitud de los datos, no si las noticias son verdad o mentira.
+- 🔐 **Integridad (30%):** % noticias con hash MD5 único
+- 🗂️ **Clasificación (25%):** % noticias con tema asignado
+- 📡 **Diversidad (20%):** fuentes activas sobre total configurado
+- 🗺️ **Cobertura geo (10%):** % noticias con territorio asignado
+- 🌀 **Narrativas (10%):** % noticias con narrativa detectada
+- ⚖️ **Equilibrio (5%):** distribución homogénea entre partidos
+
+> ⚠️ Para verificación de hechos individuales: Newtral, Maldita, EFE Verifica.
+""")
+
+    st.markdown("---")
+
     # ---------------------------------------------------------
     # VOLUMEN POR PARTIDO Y DÍA
     # ---------------------------------------------------------
@@ -749,7 +821,7 @@ with tab1:
     if not df.empty and "source" in df.columns and "created_at" in df.columns:
         import pandas as _pd2
         _df_24 = df[_pd2.to_datetime(df["created_at"], errors="coerce") >=
-                    _pd2.Timestamp.now() - _pd2.Timedelta(hours=24)]
+                    _pd2.Timestamp.now() - _pd2.Timedelta(hours=48)]
         _fuentes_activas = set(_df_24["source"].unique())
         _todas_fuentes   = set(df["source"].unique())
         _fuentes_caidas  = sorted(_todas_fuentes - _fuentes_activas)
