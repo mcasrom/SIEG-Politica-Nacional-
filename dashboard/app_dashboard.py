@@ -61,9 +61,14 @@ st.sidebar.markdown("""
 # ---------------------------------------------------------
 
 def load_data():
-    conn = sqlite3.connect(DB_PATH)
-    df = pd.read_sql_query("SELECT * FROM noticias_norm", conn)
-    conn.close()
+    # Streamlit Cloud: usa CSV exportados. Local: usa SQLite
+    csv_path = os.path.join(BASE_DIR, "data", "export", "noticias_norm.csv")
+    if not os.path.exists(DB_PATH) and os.path.exists(csv_path):
+        df = pd.read_csv(csv_path)
+    else:
+        conn = sqlite3.connect(DB_PATH)
+        df = pd.read_sql_query("SELECT * FROM noticias_norm", conn)
+        conn.close()
 
 
     df["created_at"] = pd.to_datetime(df["created_at"], errors="coerce")
@@ -707,9 +712,13 @@ with tab2:
     st.header("📈 Tendencias & Narrativas – Análisis OSINT Avanzado")
 
     # Cargar tendencias
-    conn = sqlite3.connect(DB_PATH)
-    df_t = pd.read_sql_query("SELECT * FROM tendencias_diarias", conn)
-    conn.close()
+    csv_tend = os.path.join(BASE_DIR, "data", "export", "tendencias_diarias.csv")
+    if not os.path.exists(DB_PATH) and os.path.exists(csv_tend):
+        df_t = pd.read_csv(csv_tend)
+    else:
+        conn = sqlite3.connect(DB_PATH)
+        df_t = pd.read_sql_query("SELECT * FROM tendencias_diarias", conn)
+        conn.close()
 
     df_t["fecha"] = pd.to_datetime(df_t["fecha"], errors="coerce")
 
