@@ -859,7 +859,9 @@ with tab1:
         _df_24 = df[_pd2.to_datetime(df["created_at"], errors="coerce") >=
                     _pd2.Timestamp.now() - _pd2.Timedelta(hours=48)]
         _fuentes_activas = set(_df_24["source"].unique())
-        _todas_fuentes   = set(df["source"].unique())
+        _cfg_feeds = _json_val.load(open(os.path.join(BASE_DIR, "config", "feeds_rss.json"), encoding="utf-8"))
+        _fuentes_config = {f["name"] for f in _cfg_feeds["feeds"]}
+        _todas_fuentes   = set(df["source"].unique()) & _fuentes_config
         _fuentes_caidas  = sorted(_todas_fuentes - _fuentes_activas)
 
     # Mostrar métricas
