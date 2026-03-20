@@ -698,6 +698,104 @@ with tab1:
 
         st.caption("💡 Si los duplicados crecen, revisar el pipeline de deduplicación por hash_id.")
 
+    # ── Auto-auditoría del sistema ────────────────────────
+    st.markdown("#### 🔬 Auto-auditoría del sistema")
+
+    import shutil as _shutil
+    import platform
+
+    # Disco
+    try:
+        _disk = _shutil.disk_usage("/")
+        _disk_total = _disk.total / (1024**3)
+        _disk_used  = _disk.used  / (1024**3)
+        _disk_free  = _disk.free  / (1024**3)
+        _disk_pct   = _disk.used  / _disk.total * 100
+        _disk_color = "🔴" if _disk_pct > 85 else ("🟠" if _disk_pct > 70 else "🟢")
+    except:
+        _disk_total = _disk_used = _disk_free = _disk_pct = 0
+        _disk_color = "⚪"
+
+    # RAM
+    try:
+        import psutil as _psutil
+        _mem = _psutil.virtual_memory()
+        _ram_total = _mem.total / (1024**2)
+        _ram_used  = _mem.used  / (1024**2)
+        _ram_pct   = _mem.percent
+        _ram_color = "🔴" if _ram_pct > 85 else ("🟠" if _ram_pct > 70 else "🟢")
+    except:
+        _ram_total = _ram_used = _ram_pct = 0
+        _ram_color = "⚪"
+
+    # Última ejecución del pipeline
+    _log_path = os.path.join(BASE_DIR, "logs", "pipeline.log")
+    _last_pipeline = "—"
+    _pipeline_ok   = False
+    if os.path.exists(_log_path):
+        with open(_log_path, "r") as _f:
+            _lines = _f.readlines()
+        for _l in reversed(_lines):
+            if "Pipeline completado" in _l:
+                _last_pipeline = _l.strip()[:35]
+                _pipeline_ok   = True
+                break
+            elif "ERROR" in _l:
+                _last_pipeline = "⚠ ERROR detectado"
+                break
+
+    # Fuentes caídas (sin noticias últimas 24h)
+    _fuentes_caidas = []
+    if not df.empty and "source" in df.columns and "created_at" in df.columns:
+        import pandas as _pd2
+        _df_24 = df[_pd2.to_datetime(df["created_at"], errors="coerce") >=
+                    _pd2.Timestamp.now() - _pd2.Timedelta(hours=24)]
+        _fuentes_activas = set(_df_24["source"].unique())
+        _todas_fuentes   = set(df["source"].unique())
+        _fuentes_caidas  = sorted(_todas_fuentes - _fuentes_activas)
+
+    # Mostrar métricas
+    _ac1, _ac2, _ac3, _ac4 = st.columns(4)
+    _ac1.metric(f"{_disk_color} Disco usado",
+                f"{_disk_used:.1f} GB",
+                f"{_disk_pct:.1f}% de {_disk_total:.0f}GB")
+    _ac2.metric(f"{_ram_color} RAM usada",
+                f"{_ram_used:.0f} MB",
+                f"{_ram_pct:.1f}%")
+    _ac3.metric("🔄 Último pipeline",
+                "OK" if _pipeline_ok else "—",
+                _last_pipeline)
+    _ac4.metric("📡 Fuentes caídas",
+                f"{len(_fuentes_caidas)}",
+                delta="revisar" if _fuentes_caidas else "todas activas",
+                delta_color="inverse" if _fuentes_caidas else "off")
+
+    if _fuentes_caidas:
+        st.warning(f"⚠️ Fuentes sin noticias en 24h: {', '.join(_fuentes_caidas[:10])}")
+    else:
+        st.success("✅ Todas las fuentes activas en las últimas 24h.")
+
+    # Veracidad aproximada: ratio fuentes con > 1 noticia vs total
+    if not df.empty:
+        _noticias_por_fuente = df.groupby("source").size()
+        _fuentes_activas_n   = (_noticias_por_fuente > 1).sum()
+        _total_fuentes_n     = len(_noticias_por_fuente)
+        _cobertura_pct       = _fuentes_activas_n / _total_fuentes_n * 100 if _total_fuentes_n > 0 else 0
+        _diversidad_pct      = df["source"].nunique() / max(len(df), 1) * 100
+        _neutralidad         = (df["sentiment_label"] == "NEU").mean() * 100
+
+        st.markdown("**Indicadores de calidad de datos:**")
+        _q1, _q2, _q3 = st.columns(3)
+        _q1.metric("📰 Cobertura de fuentes",
+                   f"{_cobertura_pct:.1f}%",
+                   f"{_fuentes_activas_n}/{_total_fuentes_n} fuentes con datos")
+        _q2.metric("🔀 Diversidad de fuentes",
+                   f"{df['source'].nunique()} fuentes",
+                   "pluralidad mediática")
+        _q3.metric("⚖️ Neutralidad media",
+                   f"{_neutralidad:.1f}%",
+                   "noticias clasificadas NEU")
+
     # ---------------------------------------------------------
     # METODOLOGÍA
     # ---------------------------------------------------------
