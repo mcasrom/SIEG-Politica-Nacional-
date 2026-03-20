@@ -36,3 +36,20 @@ Actualizar con: git remote set-url origin https://mcasrom:TOKEN@github.com/...
 BNG (2), SALF (2), MÁS MADRID (7) tienen muy pocas noticias.
 La valoración mediática para estos partidos no es estadísticamente fiable.
 Umbral mínimo de fiabilidad: 10 noticias (ya marcado en dashboard).
+
+## CIS — Datos hardcodeados (revisar mensualmente)
+Los datos del barómetro CIS están en `config/politica_config.json` → `cis_valoracion`.
+Líderes SIN datos CIS (None) — no aparecen en el CIS o no son medidos regularmente:
+- Ione Belarra (PODEMOS)
+- Oriol Junqueras (ERC)
+- Carles Puigdemont (JUNTS)
+- Andoni Ortuzar (PNV), Arnaldo Otegi (EH Bildu), Fernando Clavijo (CC),
+  Ana Pontón (BNG), Álvaro Bernad (SALF), Mónica García (MÁS MADRID)
+
+**Actualización manual mensual:**
+Cada primer viernes de mes el CIS publica el barómetro en https://www.cis.es
+Añadir nuevo mes en `historico` de cada líder y actualizar `ultimo_barometro`.
+
+**Automatización futura:**
+Script `scripts/update_cis.py` pendiente de implementar —
+scraping de https://www.cis.es/resultados-encuestas cuando haya PDF parseable.

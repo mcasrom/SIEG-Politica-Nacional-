@@ -1,94 +1,496 @@
 {
   "partidos": {
-    "PSOE":       ["PSOE", "socialistas", "sanchismo", "Pedro Sánchez", "Partido Socialista"],
-    "PP":         ["PP", "Partido Popular", "Feijóo", "Núñez Feijóo", "popular"],
-    "VOX":        ["VOX", "Abascal", "Santiago Abascal"],
-    "SUMAR":      ["SUMAR", "Yolanda Díaz"],
-    "PODEMOS":    ["PODEMOS", "Irene Montero", "Ione Belarra", "morados"],
-    "ERC":        ["ERC", "Esquerra", "Oriol Junqueras", "Esquerra Republicana"],
-    "JUNTS":      ["JUNTS", "Puigdemont", "Carles Puigdemont", "Junts per Catalunya"],
-    "SALF":       ["SALF", "Se Acabó La Fiesta", "Álvaro Bernad"],
-    "PNV":        ["PNV", "EAJ", "PNV-EAJ", "Partido Nacionalista Vasco", "Andoni Ortuzar", "Imanol Pradales"],
-    "EH BILDU":   ["EH Bildu", "Bildu", "Arnaldo Otegi", "Otegi", "abertzale"],
-    "CC":         ["Coalición Canaria", "CC-PNC", "Fernando Clavijo", "Clavijo", "canarios"],
-    "BNG":        ["BNG", "Bloque Nacionalista Galego", "Ana Pontón", "Pontón"],
-    "CUP":        ["CUP", "Candidatura d'Unitat Popular", "cupaires"],
-    "PDECAT":     ["PDeCAT", "Demòcrates", "Demócratas de Catalunya"],
-    "MÁS MADRID": ["Más Madrid", "Mónica García", "Rita Maestre"],
-    "Cs":         ["Ciudadanos", "partido naranja"]
+    "PSOE": [
+      "PSOE",
+      "socialistas",
+      "sanchismo",
+      "Pedro Sánchez",
+      "Partido Socialista"
+    ],
+    "PP": [
+      "PP",
+      "Partido Popular",
+      "Feijóo",
+      "Núñez Feijóo",
+      "popular"
+    ],
+    "VOX": [
+      "VOX",
+      "Abascal",
+      "Santiago Abascal"
+    ],
+    "SUMAR": [
+      "SUMAR",
+      "Yolanda Díaz"
+    ],
+    "PODEMOS": [
+      "PODEMOS",
+      "Irene Montero",
+      "Ione Belarra",
+      "morados"
+    ],
+    "ERC": [
+      "ERC",
+      "Esquerra",
+      "Oriol Junqueras",
+      "Esquerra Republicana"
+    ],
+    "JUNTS": [
+      "JUNTS",
+      "Puigdemont",
+      "Carles Puigdemont",
+      "Junts per Catalunya"
+    ],
+    "SALF": [
+      "SALF",
+      "Se Acabó La Fiesta",
+      "Álvaro Bernad"
+    ],
+    "PNV": [
+      "PNV",
+      "EAJ",
+      "PNV-EAJ",
+      "Partido Nacionalista Vasco",
+      "Andoni Ortuzar",
+      "Imanol Pradales"
+    ],
+    "EH BILDU": [
+      "EH Bildu",
+      "Bildu",
+      "Arnaldo Otegi",
+      "Otegi",
+      "abertzale"
+    ],
+    "CC": [
+      "Coalición Canaria",
+      "CC-PNC",
+      "Fernando Clavijo",
+      "Clavijo",
+      "canarios"
+    ],
+    "BNG": [
+      "BNG",
+      "Bloque Nacionalista Galego",
+      "Ana Pontón",
+      "Pontón"
+    ],
+    "CUP": [
+      "CUP",
+      "Candidatura d'Unitat Popular",
+      "cupaires"
+    ],
+    "PDECAT": [
+      "PDeCAT",
+      "Demòcrates",
+      "Demócratas de Catalunya"
+    ],
+    "MÁS MADRID": [
+      "Más Madrid",
+      "Mónica García",
+      "Rita Maestre"
+    ],
+    "Cs": [
+      "Ciudadanos",
+      "partido naranja"
+    ]
   },
-
   "lideres": {
-    "PP":         {"lider": "Alberto Núñez Feijóo", "posicion": "Oposición",      "ideologia": "Centro-derecha"},
-    "PSOE":       {"lider": "Pedro Sánchez",         "posicion": "Gobierno",       "ideologia": "Centro-izquierda"},
-    "VOX":        {"lider": "Santiago Abascal",      "posicion": "Oposición",      "ideologia": "Derecha nacional"},
-    "SUMAR":      {"lider": "Yolanda Díaz",          "posicion": "Gobierno",       "ideologia": "Izquierda"},
-    "PODEMOS":    {"lider": "Ione Belarra",          "posicion": "Oposición",      "ideologia": "Izquierda radical"},
-    "ERC":        {"lider": "Oriol Junqueras",       "posicion": "Independencia",  "ideologia": "Independentismo izq."},
-    "JUNTS":      {"lider": "Carles Puigdemont",     "posicion": "Independencia",  "ideologia": "Independentismo lib."},
-    "SALF":       {"lider": "Álvaro Bernad",         "posicion": "Oposición",      "ideologia": "Liberalismo"},
-    "PNV":        {"lider": "Andoni Ortuzar",        "posicion": "Apoyo gobierno", "ideologia": "Nacionalismo vasco"},
-    "EH BILDU":   {"lider": "Arnaldo Otegi",         "posicion": "Oposición",      "ideologia": "Izquierda abertzale"},
-    "CC":         {"lider": "Fernando Clavijo",      "posicion": "Oposición",      "ideologia": "Regionalismo canario"},
-    "BNG":        {"lider": "Ana Pontón",            "posicion": "Oposición",      "ideologia": "Nacionalismo gallego"},
-    "CUP":        {"lider": "Laia Estrada",          "posicion": "Independencia",  "ideologia": "Independentismo radical"},
-    "PDECAT":     {"lider": "Josep Rull",            "posicion": "Independencia",  "ideologia": "Independentismo liberal"},
-    "MÁS MADRID": {"lider": "Mónica García",         "posicion": "Oposición",      "ideologia": "Izquierda verde"},
-    "Cs":         {"lider": "—",                     "posicion": "Residual",       "ideologia": "Liberalismo centrista"}
+    "PP": {
+      "lider": "Alberto Núñez Feijóo",
+      "posicion": "Oposición",
+      "ideologia": "Centro-derecha"
+    },
+    "PSOE": {
+      "lider": "Pedro Sánchez",
+      "posicion": "Gobierno",
+      "ideologia": "Centro-izquierda"
+    },
+    "VOX": {
+      "lider": "Santiago Abascal",
+      "posicion": "Oposición",
+      "ideologia": "Derecha nacional"
+    },
+    "SUMAR": {
+      "lider": "Yolanda Díaz",
+      "posicion": "Gobierno",
+      "ideologia": "Izquierda"
+    },
+    "PODEMOS": {
+      "lider": "Ione Belarra",
+      "posicion": "Oposición",
+      "ideologia": "Izquierda radical"
+    },
+    "ERC": {
+      "lider": "Oriol Junqueras",
+      "posicion": "Independencia",
+      "ideologia": "Independentismo izq."
+    },
+    "JUNTS": {
+      "lider": "Carles Puigdemont",
+      "posicion": "Independencia",
+      "ideologia": "Independentismo lib."
+    },
+    "SALF": {
+      "lider": "Álvaro Bernad",
+      "posicion": "Oposición",
+      "ideologia": "Liberalismo"
+    },
+    "PNV": {
+      "lider": "Andoni Ortuzar",
+      "posicion": "Apoyo gobierno",
+      "ideologia": "Nacionalismo vasco"
+    },
+    "EH BILDU": {
+      "lider": "Arnaldo Otegi",
+      "posicion": "Oposición",
+      "ideologia": "Izquierda abertzale"
+    },
+    "CC": {
+      "lider": "Fernando Clavijo",
+      "posicion": "Oposición",
+      "ideologia": "Regionalismo canario"
+    },
+    "BNG": {
+      "lider": "Ana Pontón",
+      "posicion": "Oposición",
+      "ideologia": "Nacionalismo gallego"
+    },
+    "CUP": {
+      "lider": "Laia Estrada",
+      "posicion": "Independencia",
+      "ideologia": "Independentismo radical"
+    },
+    "PDECAT": {
+      "lider": "Josep Rull",
+      "posicion": "Independencia",
+      "ideologia": "Independentismo liberal"
+    },
+    "MÁS MADRID": {
+      "lider": "Mónica García",
+      "posicion": "Oposición",
+      "ideologia": "Izquierda verde"
+    },
+    "Cs": {
+      "lider": "—",
+      "posicion": "Residual",
+      "ideologia": "Liberalismo centrista"
+    }
   },
-
   "narrativas": {
-    "amnistia":           ["amnistía", "amnistia", "ley de amnistía"],
-    "lawfare":            ["lawfare", "persecución judicial", "guerra judicial", "judicialización"],
-    "golpe_estado":       ["golpe de estado", "golpista", "golpe institucional"],
-    "pucherazo":          ["pucherazo", "fraude electoral", "fraude en las elecciones"],
-    "ocupacion":          ["okupa", "ocupación", "ocupas", "okupación"],
-    "inmigracion_ilegal": ["inmigración ilegal", "irregular", "cayucos", "menas", "frontera sur"],
-    "corrupcion":         ["corrupción", "corrupto", "trama", "malversación", "soborno", "caso"],
-    "crisis_territorial": ["crisis territorial", "independencia", "secesión", "procés", "autodeterminación"],
-    "inseguridad":        ["inseguridad", "delincuencia", "robos", "agresión", "violencia callejera"],
-    "crisis_economica":   ["crisis económica", "recesión", "inflación", "subida de precios", "coste de vida"],
-    "feminismo":          ["feminismo", "violencia de género", "brecha salarial", "igualdad de género"],
-    "vivienda_emergencia":["emergencia habitacional", "sin techo", "desahucio", "burbuja inmobiliaria"]
+    "amnistia": [
+      "amnistía",
+      "amnistia",
+      "ley de amnistía"
+    ],
+    "lawfare": [
+      "lawfare",
+      "persecución judicial",
+      "guerra judicial",
+      "judicialización"
+    ],
+    "golpe_estado": [
+      "golpe de estado",
+      "golpista",
+      "golpe institucional"
+    ],
+    "pucherazo": [
+      "pucherazo",
+      "fraude electoral",
+      "fraude en las elecciones"
+    ],
+    "ocupacion": [
+      "okupa",
+      "ocupación",
+      "ocupas",
+      "okupación"
+    ],
+    "inmigracion_ilegal": [
+      "inmigración ilegal",
+      "irregular",
+      "cayucos",
+      "menas",
+      "frontera sur"
+    ],
+    "corrupcion": [
+      "corrupción",
+      "corrupto",
+      "trama",
+      "malversación",
+      "soborno",
+      "caso"
+    ],
+    "crisis_territorial": [
+      "crisis territorial",
+      "independencia",
+      "secesión",
+      "procés",
+      "autodeterminación"
+    ],
+    "inseguridad": [
+      "inseguridad",
+      "delincuencia",
+      "robos",
+      "agresión",
+      "violencia callejera"
+    ],
+    "crisis_economica": [
+      "crisis económica",
+      "recesión",
+      "inflación",
+      "subida de precios",
+      "coste de vida"
+    ],
+    "feminismo": [
+      "feminismo",
+      "violencia de género",
+      "brecha salarial",
+      "igualdad de género"
+    ],
+    "vivienda_emergencia": [
+      "emergencia habitacional",
+      "sin techo",
+      "desahucio",
+      "burbuja inmobiliaria"
+    ]
   },
-
   "narrativas_perfil": {
-    "amnistia":            {"color": "#9467bd", "desc": "Agenda judicial / polarización PP-VOX vs PSOE"},
-    "lawfare":             {"color": "#7f7f7f", "desc": "Agenda judicial defensiva / relato victimista"},
-    "golpe_estado":        {"color": "#e377c2", "desc": "Agenda constitucional / dramatización política"},
-    "pucherazo":           {"color": "#bcbd22", "desc": "Agenda electoral / desconfianza institucional"},
-    "ocupacion":           {"color": "#bcbd22", "desc": "Agenda propiedad / vivienda extrema"},
-    "inmigracion_ilegal":  {"color": "#e6550d", "desc": "Agenda identitaria / control fronterizo"},
-    "corrupcion":          {"color": "#8c564b", "desc": "Agenda anticorrupción / desgaste institucional"},
-    "crisis_territorial":  {"color": "#17becf", "desc": "Agenda soberanista / tensión España-CCAA"},
-    "inseguridad":         {"color": "#d62728", "desc": "Agenda de orden público / miedo social"},
-    "crisis_economica":    {"color": "#ff7f0e", "desc": "Agenda económica / descontento social"},
-    "feminismo":           {"color": "#e377c2", "desc": "Agenda de género / derechos de la mujer"},
-    "vivienda_emergencia": {"color": "#1f77b4", "desc": "Agenda habitacional / acceso a la vivienda"}
+    "amnistia": {
+      "color": "#9467bd",
+      "desc": "Agenda judicial / polarización PP-VOX vs PSOE"
+    },
+    "lawfare": {
+      "color": "#7f7f7f",
+      "desc": "Agenda judicial defensiva / relato victimista"
+    },
+    "golpe_estado": {
+      "color": "#e377c2",
+      "desc": "Agenda constitucional / dramatización política"
+    },
+    "pucherazo": {
+      "color": "#bcbd22",
+      "desc": "Agenda electoral / desconfianza institucional"
+    },
+    "ocupacion": {
+      "color": "#bcbd22",
+      "desc": "Agenda propiedad / vivienda extrema"
+    },
+    "inmigracion_ilegal": {
+      "color": "#e6550d",
+      "desc": "Agenda identitaria / control fronterizo"
+    },
+    "corrupcion": {
+      "color": "#8c564b",
+      "desc": "Agenda anticorrupción / desgaste institucional"
+    },
+    "crisis_territorial": {
+      "color": "#17becf",
+      "desc": "Agenda soberanista / tensión España-CCAA"
+    },
+    "inseguridad": {
+      "color": "#d62728",
+      "desc": "Agenda de orden público / miedo social"
+    },
+    "crisis_economica": {
+      "color": "#ff7f0e",
+      "desc": "Agenda económica / descontento social"
+    },
+    "feminismo": {
+      "color": "#e377c2",
+      "desc": "Agenda de género / derechos de la mujer"
+    },
+    "vivienda_emergencia": {
+      "color": "#1f77b4",
+      "desc": "Agenda habitacional / acceso a la vivienda"
+    }
   },
-
   "temas": {
-    "economia":       ["econom", "inflación", "ipc", "paro", "empleo", "salario", "pib",
-                       "impuestos", "hacienda", "fiscal", "presupuesto", "energía", "gasolina"],
-    "justicia":       ["tribunal", "juez", "fiscalía", "supremo", "audiencia", "sentencia",
-                       "corrupción", "caso", "juicio", "delito", "acusación"],
-    "inmigracion":    ["inmigración", "migrante", "cayucos", "frontera", "menas", "asilo",
-                       "refugiado", "devolución", "irregular"],
-    "sanidad":        ["sanidad", "hospital", "médico", "enfermero", "salud", "urgencias",
-                       "atención primaria", "listas de espera"],
-    "educacion":      ["educación", "colegio", "universidad", "profesor", "alumno",
-                       "becas", "formación", "escuela"],
-    "vivienda":       ["vivienda", "alquiler", "hipoteca", "okupas", "ocupación",
-                       "precio", "inmobiliario", "desahucio"],
-    "seguridad":      ["policía", "guardia civil", "delincuencia", "crimen", "seguridad",
-                       "violencia", "robos", "agresión"],
-    "politica":       ["gobierno", "congreso", "senado", "elecciones", "partido",
-                       "ministro", "presidente", "coalición", "moción"],
-    "internacional":  ["ue", "unión europea", "otan", "guerra", "ucrania", "rusia",
-                       "eeuu", "china", "conflicto", "diplomacia"],
-    "genero":         ["feminismo", "violencia de género", "igualdad", "brecha salarial",
-                       "lgtb", "trans", "aborto"],
-    "medioambiente":  ["clima", "cambio climático", "sequía", "energía renovable",
-                       "contaminación", "emisiones", "incendio"]
+    "economia": [
+      "econom",
+      "inflación",
+      "ipc",
+      "paro",
+      "empleo",
+      "salario",
+      "pib",
+      "impuestos",
+      "hacienda",
+      "fiscal",
+      "presupuesto",
+      "energía",
+      "gasolina"
+    ],
+    "justicia": [
+      "tribunal",
+      "juez",
+      "fiscalía",
+      "supremo",
+      "audiencia",
+      "sentencia",
+      "corrupción",
+      "caso",
+      "juicio",
+      "delito",
+      "acusación"
+    ],
+    "inmigracion": [
+      "inmigración",
+      "migrante",
+      "cayucos",
+      "frontera",
+      "menas",
+      "asilo",
+      "refugiado",
+      "devolución",
+      "irregular"
+    ],
+    "sanidad": [
+      "sanidad",
+      "hospital",
+      "médico",
+      "enfermero",
+      "salud",
+      "urgencias",
+      "atención primaria",
+      "listas de espera"
+    ],
+    "educacion": [
+      "educación",
+      "colegio",
+      "universidad",
+      "profesor",
+      "alumno",
+      "becas",
+      "formación",
+      "escuela"
+    ],
+    "vivienda": [
+      "vivienda",
+      "alquiler",
+      "hipoteca",
+      "okupas",
+      "ocupación",
+      "precio",
+      "inmobiliario",
+      "desahucio"
+    ],
+    "seguridad": [
+      "policía",
+      "guardia civil",
+      "delincuencia",
+      "crimen",
+      "seguridad",
+      "violencia",
+      "robos",
+      "agresión"
+    ],
+    "politica": [
+      "gobierno",
+      "congreso",
+      "senado",
+      "elecciones",
+      "partido",
+      "ministro",
+      "presidente",
+      "coalición",
+      "moción"
+    ],
+    "internacional": [
+      "ue",
+      "unión europea",
+      "otan",
+      "guerra",
+      "ucrania",
+      "rusia",
+      "eeuu",
+      "china",
+      "conflicto",
+      "diplomacia"
+    ],
+    "genero": [
+      "feminismo",
+      "violencia de género",
+      "igualdad",
+      "brecha salarial",
+      "lgtb",
+      "trans",
+      "aborto"
+    ],
+    "medioambiente": [
+      "clima",
+      "cambio climático",
+      "sequía",
+      "energía renovable",
+      "contaminación",
+      "emisiones",
+      "incendio"
+    ]
+  },
+  "cis_valoracion": {
+    "Pedro Sánchez": {
+      "partido": "PSOE",
+      "historico": {
+        "2025-10": 4.44,
+        "2025-12": 4.08,
+        "2026-01": 4.13,
+        "2026-02": 4.13,
+        "2026-03": 4.43
+      }
+    },
+    "Yolanda Díaz": {
+      "partido": "SUMAR",
+      "historico": {
+        "2025-10": 4.24,
+        "2025-12": 4.01,
+        "2026-01": 3.94,
+        "2026-02": 3.96,
+        "2026-03": 4.23
+      }
+    },
+    "Alberto Núñez Feijóo": {
+      "partido": "PP",
+      "historico": {
+        "2025-10": 3.46,
+        "2025-12": 3.39,
+        "2026-01": 3.54,
+        "2026-02": 3.61,
+        "2026-03": 3.6
+      }
+    },
+    "Santiago Abascal": {
+      "partido": "VOX",
+      "historico": {
+        "2025-10": 2.89,
+        "2025-12": 2.9,
+        "2026-01": 2.74,
+        "2026-02": 2.85,
+        "2026-03": 2.99
+      }
+    },
+    "Ione Belarra": {
+      "partido": "PODEMOS",
+      "historico": {
+        "2026-03": null
+      }
+    },
+    "Oriol Junqueras": {
+      "partido": "ERC",
+      "historico": {
+        "2026-03": null
+      }
+    },
+    "Carles Puigdemont": {
+      "partido": "JUNTS",
+      "historico": {
+        "2026-03": null
+      }
+    }
+  },
+  "cis_meta": {
+    "fuente": "CIS — Centro de Investigaciones Sociológicas",
+    "url": "https://www.cis.es",
+    "escala": "0-10",
+    "frecuencia": "mensual",
+    "ultimo_barometro": "2026-03",
+    "nota": "CIS dirigido por Tezanos — considerar sesgo metodológico documentado. Comparar con índice mediático SIEG para análisis de divergencia."
   }
 }

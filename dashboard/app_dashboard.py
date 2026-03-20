@@ -1530,6 +1530,172 @@ with tab4:
     # --------------------------------------------------------
     # VISIÓN / POSICIONAMIENTO INFERIDO
     # --------------------------------------------------------
+
+    st.markdown("---")
+
+    # ── Comparador CIS vs SIEG ────────────────────────────
+    st.subheader("📊 Comparador CIS vs valoración mediática SIEG")
+    st.caption("CIS: escala 0–10 (barómetro oficial) · SIEG: sentimiento mediático −1 a +1 · Divergencia = prensa vs ciudadanía")
+
+    import json as _json_cis
+    _cfg_cis = _json_cis.load(open(
+        os.path.join(BASE_DIR, "config", "politica_config.json"), encoding="utf-8"
+    ))
+    _cis_data  = _cfg_cis.get("cis_valoracion", {})
+    _cis_meta  = _cfg_cis.get("cis_meta", {})
+    _map_sent2 = {"POS": 1, "NEU": 0, "NEG": -1}
+
+    if _cis_data:
+        # Construir tabla comparativa
+        _filas = []
+        for lider, info in _cis_data.items():
+            _partido = info.get("partido", "—")
+            _hist    = info.get("historico", {})
+            # Último valor CIS disponible
+            _ultimos = {k: v for k, v in _hist.items() if v is not None}
+            if not _ultimos:
+                continue
+            _mes_actual = sorted(_ultimos.keys())[-1]
+            _cis_val    = _ultimos[_mes_actual]
+            # Tendencia CIS (último vs anterior)
+            _meses_ord = sorted(_ultimos.keys())
+            if len(_meses_ord) >= 2:
+                _cis_delta = _ultimos[_meses_ord[-1]] - _ultimos[_meses_ord[-2]]
+            else:
+                _cis_delta = 0.0
+            # Valoración mediática SIEG
+            _df_lider = df_narr[df_narr["partido"] == _partido].copy()
+            if _df_lider.empty:
+                continue
+            _df_lider["sent_score"] = _df_lider["sentiment_label"].map(_map_sent2)
+            _sieg_val   = _df_lider["sent_score"].mean()
+            _sieg_nots  = len(_df_lider)
+            # Normalizar CIS a −1/+1 para comparar: (val/10)*2 − 1
+            _cis_norm   = (_cis_val / 10) * 2 - 1
+            # Divergencia
+            _divergencia = _sieg_val - _cis_norm
+            _filas.append({
+                "Líder":        lider,
+                "Partido":      _partido,
+                "CIS":          _cis_val,
+                "Mes CIS":      _mes_actual,
+                "Δ CIS":        round(_cis_delta, 2),
+                "SIEG":         round(_sieg_val, 3),
+                "Noticias":     _sieg_nots,
+                "Divergencia":  round(_divergencia, 3),
+            })
+
+        if _filas:
+            import pandas as _pd_cis
+            _df_cis = _pd_cis.DataFrame(_filas).sort_values("Divergencia", ascending=False)
+
+            # Gráfico de barras comparativo
+            import altair as _alt_cis
+
+            # Normalizar CIS para comparar en misma escala que SIEG
+            _df_cis["CIS_norm"] = (_df_cis["CIS"] / 10) * 2 - 1
+
+            _df_melt = _pd_cis.melt(
+                _df_cis[["Líder", "CIS_norm", "SIEG"]],
+                id_vars="Líder",
+                var_name="Fuente",
+                value_name="Valoración"
+            )
+            _df_melt["Fuente"] = _df_melt["Fuente"].map({
+                "CIS_norm": "CIS (normalizado)",
+                "SIEG": "SIEG (mediático)"
+            })
+
+            _chart_cis = (
+                _alt_cis.Chart(_df_melt)
+                .mark_bar(opacity=0.8)
+                .encode(
+                    x=_alt_cis.X("Valoración:Q", scale=_alt_cis.Scale(domain=[-1, 1]),
+                                  title="Valoración (−1 a +1)"),
+                    y=_alt_cis.Y("Líder:N", sort="-x", title=""),
+                    color=_alt_cis.Color("Fuente:N", scale=_alt_cis.Scale(
+                        domain=["CIS (normalizado)", "SIEG (mediático)"],
+                        range=["#1f77b4", "#ff7f0e"]
+                    )),
+                    tooltip=["Líder:N", "Fuente:N",
+                             _alt_cis.Tooltip("Valoración:Q", format=".3f")]
+                )
+                .properties(height=280, title="CIS vs SIEG — misma escala −1 a +1")
+            )
+            st.altair_chart(_chart_cis, use_container_width=True)
+
+            # Gráfico de divergencia
+            _chart_div = (
+                _alt_cis.Chart(_df_cis)
+                .mark_bar()
+                .encode(
+                    x=_alt_cis.X("Divergencia:Q", title="Divergencia SIEG − CIS"),
+                    y=_alt_cis.Y("Líder:N", sort="-x", title=""),
+                    color=_alt_cis.condition(
+                        "datum.Divergencia > 0",
+                        _alt_cis.value("#ff7f0e"),
+                        _alt_cis.value("#1f77b4")
+                    ),
+                    tooltip=["Líder:N", "Partido:N",
+                             _alt_cis.Tooltip("Divergencia:Q", format="+.3f"),
+                             _alt_cis.Tooltip("CIS:Q", format=".2f"),
+                             _alt_cis.Tooltip("SIEG:Q", format=".3f")]
+                )
+                .properties(height=220,
+                    title="Divergencia: naranja = prensa más favorable que CIS · azul = prensa más negativa")
+            )
+            st.altair_chart(_chart_div, use_container_width=True)
+
+            # Tabla detallada
+            st.dataframe(
+                _df_cis[["Líder","Partido","CIS","Mes CIS","Δ CIS","SIEG","Noticias","Divergencia"]],
+                use_container_width=True
+            )
+
+            # Interpretación automática
+            st.markdown("**🔎 Interpretación automática:**")
+            for _, row in _df_cis.iterrows():
+                div = row["Divergencia"]
+                if div > 0.3:
+                    st.markdown(f"- **{row['Líder']}** ({row['Partido']}) — prensa **más favorable** que el CIS ({div:+.2f}). Posible sobrerepresentación mediática positiva.")
+                elif div < -0.3:
+                    st.markdown(f"- **{row['Líder']}** ({row['Partido']}) — prensa **más negativa** que el CIS ({div:+.2f}). Posible sesgo mediático adverso.")
+                else:
+                    st.markdown(f"- **{row['Líder']}** ({row['Partido']}) — convergencia CIS/prensa ({div:+.2f}). Coherencia entre opinión pública y cobertura.")
+
+            with st.expander("📐 Metodología de comparación CIS vs SIEG"):
+                st.markdown("""
+**Escalas originales — NO comparables directamente:**
+| Fuente | Escala original | Significado |
+|--------|----------------|-------------|
+| CIS | 0 a 10 | 0 = muy mal, 10 = muy bien |
+| SIEG | −1 a +1 | −1 = muy negativo, +1 = muy positivo |
+
+**Normalización aplicada para comparar:**
+```
+CIS normalizado = (valor_CIS / 10) × 2 − 1
+```
+Ejemplos:
+- CIS 5.0 → SIEG equivalente: 0.00 (neutral)
+- CIS 7.5 → SIEG equivalente: +0.50 (positivo)
+- CIS 2.5 → SIEG equivalente: −0.50 (negativo)
+
+**Divergencia = SIEG − CIS_normalizado**
+- Valor **positivo** (naranja): la prensa es MÁS favorable que la opinión ciudadana
+- Valor **negativo** (azul): la prensa es MÁS negativa que la opinión ciudadana
+- Cercano a **0**: coherencia entre cobertura mediática y valoración ciudadana
+
+> ⚠️ El CIS mide valoración ciudadana directa. SIEG mide sentimiento de la cobertura mediática.
+> Son perspectivas complementarias, no equivalentes. La divergencia entre ambas
+> puede indicar sesgo mediático, desconexión prensa-ciudadanía o momentos de crisis/auge político.
+
+> ⚠️ El barómetro CIS ha recibido críticas metodológicas documentadas desde 2018.
+> Los datos SIEG son independientes y no están sujetos a esas limitaciones.
+""")
+            st.caption(f"Fuente CIS: {_cis_meta.get('fuente','—')} · Último barómetro: {_cis_meta.get('ultimo_barometro','—')}")
+
+    st.markdown("---")
+
     st.subheader("🧠 Visión y posicionamiento inferido por partido")
 
     for p in partidos_narr:
