@@ -806,15 +806,21 @@ with tab1:
     import shutil as _shutil
     import platform
 
+    _es_local = os.path.exists(os.path.expanduser("~/SIEG-Politica-Nacional"))
     # Disco
     try:
-        _disk = _shutil.disk_usage("/")
-        _disk_total = _disk.total / (1024**3)
-        _disk_used  = _disk.used  / (1024**3)
-        _disk_free  = _disk.free  / (1024**3)
-        _disk_pct   = _disk.used  / _disk.total * 100
-        _disk_color = "🔴" if _disk_pct > 85 else ("🟠" if _disk_pct > 70 else "🟢")
+        if _es_local:
+            _disk = _shutil.disk_usage("/")
+            _disk_total = _disk.total / (1024**3)
+            _disk_used  = _disk.used  / (1024**3)
+            _disk_pct   = _disk.used  / _disk.total * 100
+            _disk_color = "🔴" if _disk_pct > 85 else ("🟠" if _disk_pct > 70 else "🟢")
+        else:
+            _disk_total = _disk_used = _disk_pct = 0
+            _disk_color = "☁️"
     except:
+        _disk_total = _disk_used = _disk_pct = 0
+        _disk_color = "⚪"
         _disk_total = _disk_used = _disk_free = _disk_pct = 0
         _disk_color = "⚪"
 
@@ -858,12 +864,16 @@ with tab1:
 
     # Mostrar métricas
     _ac1, _ac2, _ac3, _ac4 = st.columns(4)
-    _ac1.metric(f"{_disk_color} Disco usado",
-                f"{_disk_used:.1f} GB",
-                f"{_disk_pct:.1f}% de {_disk_total:.0f}GB")
-    _ac2.metric(f"{_ram_color} RAM usada",
-                f"{_ram_used:.0f} MB",
-                f"{_ram_pct:.1f}%")
+    if _es_local:
+        _ac1.metric(f"{_disk_color} Disco Odroid",
+                    f"{_disk_used:.1f} GB",
+                    f"{_disk_pct:.1f}% de {_disk_total:.0f}GB")
+        _ac2.metric(f"{_ram_color} RAM Odroid",
+                    f"{_ram_used:.0f} MB",
+                    f"{_ram_pct:.1f}%")
+    else:
+        _ac1.metric("☁️ Disco", "Streamlit Cloud", "datos no disponibles")
+        _ac2.metric("☁️ RAM", "Streamlit Cloud", "datos no disponibles")
     _ac3.metric("🔄 Último pipeline",
                 "OK" if _pipeline_ok else "—",
                 _last_pipeline)
