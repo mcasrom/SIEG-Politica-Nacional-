@@ -494,3 +494,11 @@
     "nota": "CIS dirigido por Tezanos — considerar sesgo metodológico documentado. Comparar con índice mediático SIEG para análisis de divergencia."
   }
 }
+
+
+
+# Añadir el nuevo mes en "historico" de cada líder
+# Actualizar "ultimo_barometro"
+git add config/politica_config.json
+git commit -m "data: CIS YYYY-MM manual"
+git push origin main
