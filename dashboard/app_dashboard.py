@@ -59,6 +59,24 @@ st.sidebar.markdown("""
 """, unsafe_allow_html=True)
 
 
+# Botón descarga PDF en sidebar
+import glob as _glob
+_reports = sorted(_glob.glob(os.path.join(BASE_DIR, "data", "reports", "*.pdf")), reverse=True)
+st.sidebar.markdown("---")
+st.sidebar.markdown("**📄 Informe PDF**")
+if _reports:
+    with open(_reports[0], "rb") as _f:
+        st.sidebar.download_button(
+            label="Descargar ultimo informe",
+            data=_f.read(),
+            file_name=os.path.basename(_reports[0]),
+            mime="application/pdf"
+        )
+    st.sidebar.caption(os.path.basename(_reports[0])[14:27].replace("_", " "))
+else:
+    st.sidebar.info("Sin informes generados aun.")
+
+
 # ---------------------------------------------------------
 # CARGA DE DATOS
 # ---------------------------------------------------------
