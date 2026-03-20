@@ -63,8 +63,10 @@ st.sidebar.markdown("""
 def load_data():
     # Streamlit Cloud: usa CSV exportados. Local: usa SQLite
     csv_path = os.path.join(BASE_DIR, "data", "export", "noticias_norm.csv")
-    if not os.path.exists(DB_PATH) and os.path.exists(csv_path):
-        df = pd.read_csv(csv_path)
+    cloud_csv = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "export", "noticias_norm.csv")
+    _csv = csv_path if os.path.exists(csv_path) else cloud_csv
+    if not os.path.exists(DB_PATH) and os.path.exists(_csv):
+        df = pd.read_csv(_csv)
     else:
         conn = sqlite3.connect(DB_PATH)
         df = pd.read_sql_query("SELECT * FROM noticias_norm", conn)
@@ -77,8 +79,11 @@ def load_data():
 
     return df
 
+# En Streamlit Cloud el repo se clona en el directorio de trabajo
+CLOUD_CSV = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "export", "noticias_norm.csv")
 csv_path_check = os.path.join(BASE_DIR, "data", "export", "noticias_norm.csv")
-if not os.path.exists(DB_PATH) and not os.path.exists(csv_path_check):
+_csv_exists = os.path.exists(csv_path_check) or os.path.exists(CLOUD_CSV)
+if not os.path.exists(DB_PATH) and not _csv_exists:
     st.error("❌ No se encontró la base de datos ni los datos exportados.")
     st.stop()
 
