@@ -1,0 +1,17 @@
+venv/
+data/processed/noticias.db
+data/raw/
+logs/
+*.log
+*.bak_*
+__pycache__/
+*.pyc
+.env
+config/hf_token.txt
+*.bak_*
+dashboard/*BACKUP*
+scripts/patch_*.py
+scripts/*BACKUP*
+data/noticias.db
+data/processed/*.db
+data/processed/noticias_BACKUP*

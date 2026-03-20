@@ -1,0 +1,9 @@
+{
+  "PSOE": ["PSOE", "socialistas", "Sánchez"],
+  "PP": ["PP", "Partido Popular", "Feijóo"],
+  "SUMAR": ["Sumar", "Yolanda Díaz"],
+  "VOX": ["Vox", "Abascal"],
+  "PODEMOS": ["Podemos", "Ione Belarra"],
+  "ERC": ["ERC", "Esquerra Republicana"],
+  "JUNTS": ["Junts", "Puigdemont"]
+}

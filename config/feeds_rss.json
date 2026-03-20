@@ -1,0 +1,79 @@
+{
+  "feeds": [
+    { "name": "El País", "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada", "type": "medio" },
+    { "name": "El Mundo", "url": "https://e00-elmundo.uecdn.es/elmundo/rss/portada.xml", "type": "medio" },
+    { "name": "ABC", "url": "https://www.abc.es/rss/feeds/abcPortada.xml", "type": "medio" },
+    { "name": "La Vanguardia", "url": "https://www.lavanguardia.com/mvc/feed/rss/home", "type": "medio" },
+    { "name": "El Confidencial", "url": "https://rss.elconfidencial.com/espana/", "type": "medio" },
+    { "name": "El Diario", "url": "https://www.eldiario.es/rss/", "type": "medio" },
+    { "name": "20 Minutos", "url": "https://www.20minutos.es/rss/", "type": "medio" },
+    { "name": "El Español", "url": "https://www.elespanol.com/rss/", "type": "medio" },
+    { "name": "Público", "url": "https://www.publico.es/rss/", "type": "medio" },
+
+    { "name": "Europa Press", "url": "https://www.europapress.es/rss/rss.aspx", "type": "agencia" },
+    { "name": "EFE", "url": "https://www.efe.com/efe/espana/1/rss", "type": "agencia" },
+
+    { "name": "La Verdad Murcia", "url": "https://www.laverdad.es/rss/feeds/lv_murcia_portada.xml", "type": "regional" },
+    { "name": "La Opinión Murcia", "url": "https://www.laopiniondemurcia.es/rss/section/1012", "type": "regional" },
+    { "name": "Murcia Plaza", "url": "https://murciaplaza.com/rss", "type": "regional" },
+
+    { "name": "Levante EMV", "url": "https://www.levante-emv.com/rss/section/1001", "type": "regional" },
+    { "name": "Información Alicante", "url": "https://www.informacion.es/rss/section/1001", "type": "regional" },
+
+    { "name": "Diario Vasco", "url": "https://www.diariovasco.com/rss/feeds/dv_portada.xml", "type": "regional" },
+    { "name": "El Correo", "url": "https://www.elcorreo.com/rss/2.0/portada/", "type": "regional" },
+    { "name": "Noticias de Gipuzkoa", "url": "https://www.noticiasdegipuzkoa.eus/rss", "type": "regional" },
+
+    { "name": "La Voz de Galicia", "url": "https://www.lavozdegalicia.es/rss/portada.xml", "type": "regional" },
+    { "name": "Faro de Vigo", "url": "https://www.farodevigo.es/rss/section/1001", "type": "regional" },
+
+    { "name": "Ara", "url": "https://www.ara.cat/rss", "type": "regional" },
+    { "name": "El Periódico de Catalunya", "url": "https://www.elperiodico.com/es/rss/rss_portada.xml", "type": "regional" },
+    { "name": "El Punt Avui", "url": "https://www.elpuntavui.cat/rss", "type": "regional" },
+
+    { "name": "Diario de Sevilla", "url": "https://www.diariodesevilla.es/rss/section/1001", "type": "local" },
+    { "name": "Diario de Cádiz", "url": "https://www.diariodecadiz.es/rss/section/1001", "type": "local" },
+    { "name": "Ideal Granada", "url": "https://www.ideal.es/rss/2.0/portada/", "type": "local" },
+    { "name": "Diario Sur Málaga", "url": "https://www.diariosur.es/rss/2.0/portada/", "type": "local" },
+
+    { "name": "Heraldo de Aragón", "url": "https://www.heraldo.es/rss/portada.xml", "type": "regional" },
+
+    { "name": "El Norte de Castilla Valladolid", "url": "https://www.elnortedecastilla.es/rss/2.0/portada/", "type": "local" },
+
+    { "name": "La Tribuna de Toledo", "url": "https://www.latribunadetoledo.es/rss/section/1001", "type": "local" },
+
+    { "name": "Hoy Extremadura", "url": "https://www.hoy.es/rss/2.0/portada/", "type": "regional" },
+
+    { "name": "La Nueva España Asturias", "url": "https://www.lne.es/rss/section/1001", "type": "local" },
+
+    { "name": "El Diario Montañés Cantabria", "url": "https://www.eldiariomontanes.es/rss/2.0/portada/", "type": "local" },
+
+    { "name": "La Rioja", "url": "https://www.larioja.com/rss/2.0/portada/", "type": "local" },
+
+    { "name": "Diario de Mallorca", "url": "https://www.diariodemallorca.es/rss/section/1001", "type": "local" },
+
+    { "name": "La Provincia Las Palmas", "url": "https://www.laprovincia.es/rss/section/1001", "type": "local" },
+    { "name": "El Día Tenerife", "url": "https://www.eldia.es/rss/section/1001", "type": "local" },
+
+    { "name": "La Opinión A Coruña", "url": "https://www.laopinioncoruna.es/rss/section/1001", "type": "local" },
+    { "name": "Diari de Girona", "url": "https://www.diaridegirona.cat/rss/section/1001", "type": "local" },
+
+    { "name": "PSOE", "url": "https://www.psoe.es/feed/", "type": "partido" },
+    { "name": "PP", "url": "https://www.pp.es/rss.xml", "type": "partido" },
+    { "name": "VOX", "url": "https://www.voxespana.es/feed", "type": "partido" },
+    { "name": "SUMAR", "url": "https://sumar.es/feed/", "type": "partido" },
+    { "name": "Podemos", "url": "https://podemos.info/feed/", "type": "partido" },
+    { "name": "ERC", "url": "https://www.esquerra.cat/ca/rss", "type": "partido" },
+    { "name": "Junts", "url": "https://junts.cat/feed/", "type": "partido" },
+    { "name": "PNV", "url": "https://www.eaj-pnv.eus/rss", "type": "partido" },
+    { "name": "EH Bildu", "url": "https://ehbildu.eus/rss", "type": "partido" },
+
+    { "name": "Cinco Días", "url": "https://cincodias.elpais.com/rss/", "type": "economia" },
+    { "name": "Expansión", "url": "https://e00-expansion.uecdn.es/rss/portada.xml", "type": "economia" },
+    { "name": "El Economista", "url": "https://www.eleconomista.es/rss/rss-economia.php", "type": "economia" },
+    { "name": "Infolibre", "url": "https://www.infolibre.es/rss", "type": "medio" },
+
+    { "name": "BBC Mundo", "url": "https://feeds.bbci.co.uk/mundo/rss.xml", "type": "internacional" },
+    { "name": "France24 ES", "url": "https://www.france24.com/es/rss", "type": "internacional" }
+  ]
+}
