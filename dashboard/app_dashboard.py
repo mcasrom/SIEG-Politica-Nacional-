@@ -1016,8 +1016,7 @@ with tab3:
 
 import json as _json_cfg
 _sieg_cfg = _json_cfg.load(open(
-    os.path.join(os.path.expanduser("~/SIEG-Politica-Nacional"),
-    "config", "politica_config.json"), encoding="utf-8"))
+    os.path.join(BASE_DIR, "config", "politica_config.json"), encoding="utf-8"))
 
 # Mapa de líderes por partido (actualizable)
 # LIDERES cargado desde config/politica_config.json
