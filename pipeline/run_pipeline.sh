@@ -62,3 +62,26 @@ run_step "terr_contexto"   "$BASE/scripts/detect_territorios_contexto.py"
 run_step "coocurrencias"   "$BASE/scripts/detect_coocurrencias.py"
 
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] Pipeline completado" >> "$LOG"
+
+# Export CSV y push a GitHub (para Streamlit Cloud)
+echo "[export] Exportando CSV..." >> "$LOG"
+source /home/dietpi/SIEG-Politica-Nacional/venv/bin/activate
+python3 - << 'PYEOF' >> "$LOG" 2>&1
+import sqlite3, pandas as pd, os
+BASE = os.path.expanduser("~/SIEG-Politica-Nacional")
+DB   = os.path.join(BASE, "data", "processed", "noticias.db")
+OUT  = os.path.join(BASE, "data", "export")
+os.makedirs(OUT, exist_ok=True)
+conn = sqlite3.connect(DB)
+pd.read_sql_query("SELECT * FROM noticias_norm WHERE DATE(created_at) >= DATE('now', '-7 days')", conn).to_csv(f"{OUT}/noticias_norm.csv", index=False)
+pd.read_sql_query("SELECT * FROM tendencias_diarias", conn).to_csv(f"{OUT}/tendencias_diarias.csv", index=False)
+conn.close()
+print("CSV exportados OK")
+PYEOF
+
+# Git push
+cd /home/dietpi/SIEG-Politica-Nacional
+git add data/export/
+git commit -m "data: update export $(date '+%Y-%m-%d %H:%M')" >> "$LOG" 2>&1
+git push origin main >> "$LOG" 2>&1
+echo "[export] Push completado" >> "$LOG"
