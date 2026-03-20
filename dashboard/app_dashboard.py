@@ -656,22 +656,25 @@ with tab1:
     # CONTROL DE CRECIMIENTO DE BD
     # ---------------------------------------------------------
     with st.expander("🗄️ Estado de la base de datos y control de crecimiento"):
-        conn2 = sqlite3.connect(DB_PATH)
-
-        df_ingesta = pd.read_sql_query(
-            "SELECT DATE(created_at) as dia, COUNT(*) as total FROM noticias_norm GROUP BY dia ORDER BY dia DESC LIMIT 30",
-            conn2
-        )
-        df_duplicados = pd.read_sql_query(
-            "SELECT COUNT(*) as total, COUNT(DISTINCT hash_id) as unicos FROM noticias_norm",
-            conn2
-        )
-        df_size = pd.read_sql_query(
-            "SELECT COUNT(*) as filas FROM noticias_norm",
-            conn2
-        )
-
-        conn2.close()
+        if os.path.exists(DB_PATH):
+            conn2 = sqlite3.connect(DB_PATH)
+            df_ingesta = pd.read_sql_query(
+                "SELECT DATE(created_at) as dia, COUNT(*) as total FROM noticias_norm GROUP BY dia ORDER BY dia DESC LIMIT 30",
+                conn2
+            )
+            df_duplicados = pd.read_sql_query(
+                "SELECT COUNT(*) as total, COUNT(DISTINCT hash_id) as unicos FROM noticias_norm",
+                conn2
+            )
+            df_size = pd.read_sql_query(
+                "SELECT COUNT(*) as filas FROM noticias_norm",
+                conn2
+            )
+            conn2.close()
+        else:
+            df_ingesta = pd.DataFrame(columns=["dia","total"])
+            df_duplicados = pd.DataFrame({"total":[len(df)],"unicos":[df["hash_id"].nunique() if "hash_id" in df.columns else 0]})
+            df_size = pd.DataFrame({"filas":[len(df)]})
 
         c_db1, c_db2, c_db3 = st.columns(3)
         c_db1.metric("Filas totales", f"{df_size['filas'].iloc[0]:,}")
@@ -1032,10 +1035,15 @@ with tab4:
     # --------------------------------------------------------
     # DATOS BASE
     # --------------------------------------------------------
-    conn = sqlite3.connect(DB_PATH)
-    df_narr = pd.read_sql_query("SELECT * FROM noticias_norm WHERE partido IS NOT NULL", conn)
-    df_tend_all = pd.read_sql_query("SELECT * FROM tendencias_diarias", conn)
-    conn.close()
+    if os.path.exists(DB_PATH):
+        conn = sqlite3.connect(DB_PATH)
+        df_narr = pd.read_sql_query("SELECT * FROM noticias_norm WHERE partido IS NOT NULL", conn)
+        df_tend_all = pd.read_sql_query("SELECT * FROM tendencias_diarias", conn)
+        conn.close()
+    else:
+        df_narr = df[df["partido"].notna()].copy() if "partido" in df.columns else pd.DataFrame()
+        csv_tend = os.path.join(BASE_DIR, "data", "export", "tendencias_diarias.csv")
+        df_tend_all = pd.read_csv(csv_tend) if os.path.exists(csv_tend) else pd.DataFrame()
 
     df_narr["created_at"] = pd.to_datetime(df_narr["created_at"], errors="coerce")
     df_narr["fecha"] = df_narr["created_at"].dt.date
