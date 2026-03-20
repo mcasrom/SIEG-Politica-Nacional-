@@ -1,0 +1,19 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" xmlns="http://www.w3.org/2000/svg">
+<rect width="1280" height="640" fill="#0a0e0a"/>
+<rect width="1280" height="640" fill="none" stroke="#00ff41" stroke-width="2" opacity="0.2"/>
+<line x1="0" y1="80" x2="1280" y2="80" stroke="#00ff41" stroke-width="0.5" opacity="0.15"/>
+<line x1="0" y1="560" x2="1280" y2="560" stroke="#00ff41" stroke-width="0.5" opacity="0.15"/>
+<text x="640" y="180" text-anchor="middle" font-family="monospace" font-size="18" fill="#00ff41" opacity="0.35">root@sieg:~$ ./radar --mode=osint --target=politica-nacional --live</text>
+<text x="640" y="310" text-anchor="middle" font-family="monospace" font-size="96" font-weight="bold" fill="#00ff41" letter-spacing="20">SIEG</text>
+<text x="640" y="380" text-anchor="middle" font-family="monospace" font-size="32" fill="#00cc33" letter-spacing="6">CENTRO OSINT</text>
+<text x="640" y="430" text-anchor="middle" font-family="monospace" font-size="22" fill="#009922" opacity="0.8">Vigilancia Narrativa · Politica Nacional · Espana</text>
+<line x1="240" y1="455" x2="1040" y2="455" stroke="#00ff41" stroke-width="0.5" opacity="0.3"/>
+<text x="640" y="490" text-anchor="middle" font-family="monospace" font-size="16" fill="#00ff41" opacity="0.5">politica-nacional-osint.streamlit.app</text>
+<text x="640" y="520" text-anchor="middle" font-family="monospace" font-size="14" fill="#00ff41" opacity="0.3">© 2026 M. Castillo · mybloggingnotes@gmail.com</text>
+<rect x="40" y="40" width="8" height="8" fill="#00ff41" opacity="0.4"/>
+<rect x="1232" y="40" width="8" height="8" fill="#00ff41" opacity="0.4"/>
+<rect x="40" y="592" width="8" height="8" fill="#00ff41" opacity="0.4"/>
+<rect x="1232" y="592" width="8" height="8" fill="#00ff41" opacity="0.4"/>
+<text x="56" y="52" font-family="monospace" font-size="11" fill="#00ff41" opacity="0.3">[OSINT]</text>
+<text x="56" y="608" font-family="monospace" font-size="11" fill="#00ff41" opacity="0.3">[LIVE]</text>
+</svg>

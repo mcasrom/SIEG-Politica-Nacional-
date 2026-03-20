@@ -24,22 +24,13 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-st.markdown("""
-<div style='padding: 0.6rem 0 0.4rem 0; border-bottom: 1px solid rgba(128,128,128,0.15); margin-bottom: 1rem'>
-    <div style='font-size:0.72rem; font-weight:600; letter-spacing:0.14em;
-                text-transform:uppercase; opacity:0.40; margin-bottom:3px'>
-        Sistema de Inteligencia y Evaluación Geopolítica
-    </div>
-    <div style='font-size:1.8rem; font-weight:700; line-height:1.1'>
-        Centro OSINT · Política Nacional
-    </div>
-    <div style='font-size:0.82rem; opacity:0.40; margin-top:5px'>
-        Vigilancia narrativa automatizada · España ·
-        © 2026 <a href='mailto:mybloggingnotes@gmail.com'
-                  style='opacity:0.75; text-decoration:none; color:inherit'>M. Castillo</a>
-    </div>
-</div>
-""", unsafe_allow_html=True)
+_logo_path = os.path.join(BASE_DIR, 'dashboard', 'sieg_logo.svg')
+if os.path.exists(_logo_path):
+    with open(_logo_path, 'r') as _f:
+        _logo_svg = _f.read()
+    st.markdown('<div style="margin-bottom:1rem">' + _logo_svg + '</div>', unsafe_allow_html=True)
+else:
+    st.markdown('<h3 style="margin-bottom:1rem">SIEG – Centro OSINT · Política Nacional</h3>', unsafe_allow_html=True)
 
 st.sidebar.markdown("""
 <div style='padding: 0.3rem 0 0.9rem 0;
