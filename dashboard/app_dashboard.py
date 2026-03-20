@@ -59,6 +59,23 @@ st.sidebar.markdown("""
 """, unsafe_allow_html=True)
 
 
+
+# Ko-fi
+st.sidebar.markdown("---")
+st.sidebar.markdown("""
+<div style='text-align:center; padding: 8px 0'>
+    <a href='https://ko-fi.com/m_castillo' target='_blank'
+       style='display:inline-block; background:#FF5E5B; color:white;
+              font-weight:600; font-size:0.8rem; padding:8px 16px;
+              border-radius:20px; text-decoration:none'>
+        ☕ Buy me a coffee
+    </a>
+    <div style='font-size:0.68rem; opacity:0.45; margin-top:4px'>
+        Apoya el proyecto SIEG
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
 # Botón descarga PDF en sidebar
 import glob as _glob
 _reports = sorted(_glob.glob(os.path.join(BASE_DIR, "data", "reports", "*.pdf")), reverse=True)
