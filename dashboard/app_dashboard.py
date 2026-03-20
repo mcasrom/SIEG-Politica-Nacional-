@@ -77,8 +77,9 @@ def load_data():
 
     return df
 
-if not os.path.exists(DB_PATH):
-    st.error("❌ No se encontró la base de datos.")
+csv_path_check = os.path.join(BASE_DIR, "data", "export", "noticias_norm.csv")
+if not os.path.exists(DB_PATH) and not os.path.exists(csv_path_check):
+    st.error("❌ No se encontró la base de datos ni los datos exportados.")
     st.stop()
 
 df = load_data()
