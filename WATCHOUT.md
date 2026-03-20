@@ -53,3 +53,33 @@ Añadir nuevo mes en `historico` de cada líder y actualizar `ultimo_barometro`.
 **Automatización futura:**
 Script `scripts/update_cis.py` pendiente de implementar —
 scraping de https://www.cis.es/resultados-encuestas cuando haya PDF parseable.
+
+## Ko-fi — Configuración pendiente del perfil
+URL: https://ko-fi.com/m_castillo
+
+### Perfil básico (Settings → Profile)
+- Display name: M. Castillo · SIEG OSINT
+- Bio: Desarrollador de herramientas OSINT de análisis político y narrativo para España.
+  Creador de SIEG – Centro OSINT Política Nacional, Narrative Radar y otros proyectos
+  de inteligencia mediática de código abierto. Corriendo en un Odroid C2 desde Madrid.
+- Email: mybloggingnotes@gmail.com
+- Profile image: logo SIEG o foto del autor
+
+### Goal (Settings → Goal)
+- Goal title: «Mantener el Odroid encendido»
+- Goal description: «Cubre los costes del servidor Odroid C2 que corre 24/7
+  el pipeline de análisis OSINT: electricidad, dominio, mantenimiento.
+  Cada café ayuda a mantener el radar activo.»
+- Target amount: 30 EUR/mes (estimado costes operativos)
+- Starting amount: 0
+- Show target amount publicly: SI — genera sensación de progreso y urgencia
+
+### Pagos
+- Verificar PayPal activo en Settings → Payments
+- Cuenta PayPal vinculada: confirmar es mcasrom@gmail.com
+
+### Mensaje de agradecimiento
+Configurar mensaje automático post-pago:
+«Gracias por apoyar SIEG OSINT. Tu contribucion mantiene el radar activo
+y los datos fluyendo. Accede al dashboard en:
+https://politica-nacional-osint.streamlit.app»
