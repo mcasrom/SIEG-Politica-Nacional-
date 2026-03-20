@@ -21,18 +21,18 @@ fecha,tipo,clave,total
 2026-03-19,tema,medioambiente,102
 2026-03-19,tema,inmigracion,145
 2026-03-19,tema,sanidad,193
-2026-03-20,tema,economia,154
-2026-03-20,tema,inmigracion,46
-2026-03-20,tema,vivienda,129
-2026-03-20,tema,seguridad,98
-2026-03-20,tema,politica,247
-2026-03-20,tema,internacional,407
-2026-03-20,tema,genero,124
-2026-03-20,tema,justicia,130
-2026-03-20,tema,educacion,95
-2026-03-20,tema,otros,5
-2026-03-20,tema,medioambiente,44
-2026-03-20,tema,sanidad,54
+2026-03-20,tema,economia,214
+2026-03-20,tema,inmigracion,55
+2026-03-20,tema,vivienda,184
+2026-03-20,tema,seguridad,114
+2026-03-20,tema,politica,339
+2026-03-20,tema,internacional,542
+2026-03-20,tema,genero,138
+2026-03-20,tema,justicia,180
+2026-03-20,tema,educacion,113
+2026-03-20,tema,otros,10
+2026-03-20,tema,medioambiente,50
+2026-03-20,tema,sanidad,59
 2026-03-18,narrativa,corrupcion,8
 2026-03-19,narrativa,inseguridad,54
 2026-03-19,narrativa,crisis_economica,35
@@ -45,14 +45,14 @@ fecha,tipo,clave,total
 2026-03-19,narrativa,golpe_estado,19
 2026-03-19,narrativa,lawfare,8
 2026-03-19,narrativa,ocupacion,32
-2026-03-20,narrativa,corrupcion,109
-2026-03-20,narrativa,crisis_territorial,8
-2026-03-20,narrativa,inmigracion_ilegal,10
-2026-03-20,narrativa,vivienda_emergencia,16
-2026-03-20,narrativa,crisis_economica,26
+2026-03-20,narrativa,corrupcion,156
+2026-03-20,narrativa,crisis_territorial,9
+2026-03-20,narrativa,inmigracion_ilegal,13
+2026-03-20,narrativa,vivienda_emergencia,33
+2026-03-20,narrativa,crisis_economica,31
 2026-03-20,narrativa,ocupacion,12
-2026-03-20,narrativa,inseguridad,4
-2026-03-20,narrativa,golpe_estado,3
+2026-03-20,narrativa,inseguridad,8
+2026-03-20,narrativa,golpe_estado,6
 2026-03-20,narrativa,feminismo,3
 2026-03-18,partido,SUMAR,18
 2026-03-18,partido,ERC,33
@@ -77,17 +77,17 @@ fecha,tipo,clave,total
 2026-03-19,partido,Cs,43
 2026-03-19,partido,EH BILDU,19
 2026-03-19,partido,BNG,2
-2026-03-20,partido,ERC,160
-2026-03-20,partido,PSOE,41
-2026-03-20,partido,SUMAR,43
-2026-03-20,partido,JUNTS,7
-2026-03-20,partido,PP,60
-2026-03-20,partido,VOX,24
-2026-03-20,partido,PODEMOS,24
-2026-03-20,partido,Cs,5
-2026-03-20,partido,EH BILDU,12
-2026-03-20,partido,CUP,38
-2026-03-20,partido,MÁS MADRID,1
-2026-03-20,partido,PNV,5
+2026-03-20,partido,ERC,212
+2026-03-20,partido,PSOE,63
+2026-03-20,partido,SUMAR,61
+2026-03-20,partido,JUNTS,12
+2026-03-20,partido,PP,81
+2026-03-20,partido,VOX,34
+2026-03-20,partido,PODEMOS,32
+2026-03-20,partido,Cs,8
+2026-03-20,partido,EH BILDU,15
+2026-03-20,partido,CUP,42
+2026-03-20,partido,MÁS MADRID,2
+2026-03-20,partido,PNV,7
 2026-03-20,partido,BNG,1
 2026-03-20,partido,CC,1
