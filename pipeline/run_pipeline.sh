@@ -85,3 +85,13 @@ git add data/export/
 git commit -m "data: update export $(date '+%Y-%m-%d %H:%M')" >> "$LOG" 2>&1
 git push origin main >> "$LOG" 2>&1
 echo "[export] Push completado" >> "$LOG"
+
+# Generar informe PDF diario
+echo [pdf] Generando informe PDF... >> $LOG
+python3 $BASE/scripts/generate_report_pdf.py >> $LOG 2>&1
+echo [pdf] Informe generado >> $LOG
+
+# Notificación Telegram
+echo [telegram] Enviando resumen al canal... >> $LOG
+python3 $BASE/scripts/telegram_notify.py >> $LOG 2>&1
+echo [telegram] Notificación completada >> $LOG
