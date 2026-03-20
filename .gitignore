@@ -15,3 +15,7 @@ scripts/*BACKUP*
 data/noticias.db
 data/processed/*.db
 data/processed/noticias_BACKUP*
+dashboard/header_titulos.py
+dashboard/tab1_valoracion_lideres.py
+dashboard/tab5_howto.py
+data/reports/
