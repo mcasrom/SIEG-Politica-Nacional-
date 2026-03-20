@@ -70,6 +70,10 @@ st.sidebar.markdown("""
 # Botón descarga PDF en sidebar
 import glob as _glob
 _reports = sorted(_glob.glob(os.path.join(BASE_DIR, "data", "reports", "*.pdf")), reverse=True)
+if not _reports:
+    _export_pdf = os.path.join(BASE_DIR, "data", "export", "ultimo_informe.pdf")
+    if os.path.exists(_export_pdf):
+        _reports = [_export_pdf]
 st.sidebar.markdown("---")
 st.sidebar.markdown("**📄 Informe PDF**")
 if _reports:

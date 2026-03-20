@@ -63,6 +63,14 @@ run_step "coocurrencias"   "$BASE/scripts/detect_coocurrencias.py"
 
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] Pipeline completado" >> "$LOG"
 
+# Copiar ultimo PDF al repo para Streamlit Cloud
+echo "[pdf_export] Copiando PDF al repo..." >> ""
+_pdf=
+if [ -n "" ]; then
+    cp "" "/data/export/ultimo_informe.pdf"
+    echo "[pdf_export] PDF copiado: " >> ""
+fi
+
 # Export CSV y push a GitHub (para Streamlit Cloud)
 echo "[export] Exportando CSV..." >> "$LOG"
 source /home/dietpi/SIEG-Politica-Nacional/venv/bin/activate
