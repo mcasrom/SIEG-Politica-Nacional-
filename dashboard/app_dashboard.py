@@ -10,7 +10,10 @@ from datetime import datetime
 # ---------------------------------------------------------
 # CONFIGURACIÓN GENERAL
 # ---------------------------------------------------------
-BASE_DIR = os.path.expanduser("~/SIEG-Politica-Nacional")
+# BASE_DIR: local (Odroid) o Streamlit Cloud
+_local = os.path.expanduser("~/SIEG-Politica-Nacional")
+_cloud = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = _local if os.path.exists(_local) else _cloud
 DB_PATH = os.path.join(BASE_DIR, "data", "processed", "noticias.db")
 DATA_DIR = os.path.join(BASE_DIR, "data")
 
