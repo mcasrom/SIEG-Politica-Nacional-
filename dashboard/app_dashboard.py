@@ -159,12 +159,13 @@ if df.empty:
 # TABS PRINCIPALES
 # ---------------------------------------------------------
 
-tab1, tab2, tab3, tab4, tab5 = st.tabs([
+tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
     "📊 Análisis General",
     "📈 Tendencias & Narrativas",
     "🗺️ Tendencias por Territorio",
     "🧭 Inteligencia Narrativa",
-    "📖 Guía de uso"
+    "📖 Guía de uso",
+    "🔗 Cruce OSINT"
 ])
 
 
@@ -2060,3 +2061,144 @@ y reiniciar el pipeline.
     · Todos los derechos reservados · Uso personal e investigación
 </div>
 """, unsafe_allow_html=True)
+# =========================================================
+# TAB 6 — CRUCE OSINT (NR vs SIEG)
+# Añadir al final de app_dashboard.py
+# © 2026 M. Castillo · mybloggingnotes@gmail.com
+# =========================================================
+
+with tab6:
+
+    st.header("🔗 Cruce OSINT — Narrative Radar vs SIEG Política Nacional")
+    st.caption("Comparativa cruzada entre ambos sistemas de vigilancia narrativa")
+
+    import pandas as _pd_nr
+    import os as _os_nr
+
+    NR_DIR = _os_nr.path.expanduser("~/narrative-radar/data/processed")
+    _nr_ok = _os_nr.path.exists(NR_DIR)
+
+    if not _nr_ok:
+        st.info("ℹ️ Datos de Narrative Radar no disponibles en este entorno. "
+                "Este tab funciona en local (Odroid).")
+    else:
+        # ── Sentimiento comparado ─────────────────────────
+        st.subheader("💬 Sentimiento: NR vs SIEG")
+
+        _sent_nr_path = _os_nr.path.join(NR_DIR, "sentiment_summary.csv")
+        if _os_nr.path.exists(_sent_nr_path):
+            _df_sent_nr = _pd_nr.read_csv(_sent_nr_path)
+
+            # SIEG sentimiento actual
+            _map_s = {"POS": 1, "NEU": 0, "NEG": -1}
+            df["sent_score"] = df["sentiment_label"].map(_map_s)
+            _sieg_sent = df["sentiment_label"].value_counts(normalize=True) * 100
+
+            _c1, _c2 = st.columns(2)
+            with _c1:
+                st.markdown("**Narrative Radar**")
+                for _, row in _df_sent_nr.iterrows():
+                    _icon = "🟢" if "pos" in str(row.get("sentiment","")).lower() else (
+                            "🔴" if "neg" in str(row.get("sentiment","")).lower() else "🟡")
+                    st.markdown(f"{_icon} {row.get('sentiment','—')}: **{row.get('pct',0):.1f}%**")
+
+            with _c2:
+                st.markdown("**SIEG Política Nacional**")
+                for sent, pct in _sieg_sent.items():
+                    _icon = "🟢" if sent == "POS" else ("🔴" if sent == "NEG" else "🟡")
+                    st.markdown(f"{_icon} {sent}: **{pct:.1f}%**")
+
+        st.markdown("---")
+
+        # ── Polarización ─────────────────────────────────
+        st.subheader("⚡ Índice de Polarización (Narrative Radar)")
+
+        _pol_path = _os_nr.path.join(NR_DIR, "polarization_summary.csv")
+        if _os_nr.path.exists(_pol_path):
+            _df_pol = _pd_nr.read_csv(_pol_path)
+            _df_pol["date"] = _pd_nr.to_datetime(_df_pol["date"], errors="coerce")
+            _df_pol = _df_pol.dropna(subset=["date"]).sort_values("date")
+
+            if not _df_pol.empty:
+                import altair as _alt_nr
+                _chart_pol = (
+                    _alt_nr.Chart(_df_pol)
+                    .mark_line(point=True, color="#00ff41")
+                    .encode(
+                        x=_alt_nr.X("date:T", title="Fecha"),
+                        y=_alt_nr.Y("polarization_index:Q",
+                                    title="Índice de polarización",
+                                    scale=_alt_nr.Scale(domain=[0, 2])),
+                        tooltip=["date:T", "polarization_index:Q",
+                                 "progressive_count:Q", "conservative_count:Q"]
+                    )
+                    .properties(height=250)
+                )
+                st.altair_chart(_chart_pol, use_container_width=True)
+
+                _last_pol = _df_pol.iloc[-1]
+                _col1, _col2, _col3 = st.columns(3)
+                _col1.metric("Polarización actual",
+                             f"{_last_pol.get('polarization_index', 0):.2f}")
+                _col2.metric("Noticias progresistas",
+                             int(_last_pol.get("progressive_count", 0)))
+                _col3.metric("Noticias conservadoras",
+                             int(_last_pol.get("conservative_count", 0)))
+
+        st.markdown("---")
+
+        # ── Narrativas NR vs SIEG ─────────────────────────
+        st.subheader("🌀 Narrativas: NR vs SIEG")
+
+        _narr_nr_path = _os_nr.path.join(NR_DIR, "narratives_summary.csv")
+        if _os_nr.path.exists(_narr_nr_path):
+            _df_narr_nr = _pd_nr.read_csv(_narr_nr_path).head(10)
+
+            _n1, _n2 = st.columns(2)
+            with _n1:
+                st.markdown("**Clusters Narrative Radar (top 10)**")
+                for _, row in _df_narr_nr.iterrows():
+                    label = str(row.get("cluster_label", "—"))[:50]
+                    count = int(row.get("count", 0))
+                    st.markdown(f"- {label} ({count})")
+
+            with _n2:
+                st.markdown("**Narrativas SIEG Política Nacional**")
+                _narr_sieg = {}
+                for _, row in df.iterrows():
+                    if row.get("narrativas") and str(row["narrativas"]) not in ["ninguna","nan"]:
+                        for _n in str(row["narrativas"]).split(","):
+                            _n = _n.strip()
+                            if _n:
+                                _narr_sieg[_n] = _narr_sieg.get(_n, 0) + 1
+                for _narr, _cnt in sorted(_narr_sieg.items(), key=lambda x: -x[1])[:10]:
+                    st.markdown(f"- **{_narr}** ({_cnt})")
+
+        st.markdown("---")
+
+        # ── Bulos detectados NR ───────────────────────────
+        st.subheader("🚨 Últimos bulos detectados (Narrative Radar)")
+
+        _bulos_path = _os_nr.path.join(NR_DIR, "disinfo_bulos.csv")
+        if _os_nr.path.exists(_bulos_path):
+            _df_bulos = _pd_nr.read_csv(_bulos_path)
+            if not _df_bulos.empty:
+                st.dataframe(_df_bulos.head(10), use_container_width=True)
+            else:
+                st.info("Sin bulos detectados recientemente.")
+
+        st.markdown("---")
+
+        # ── Alertas de coordinación ───────────────────────
+        st.subheader("🤝 Alertas de coordinación (Narrative Radar)")
+
+        _coord_path = _os_nr.path.join(NR_DIR, "coordination_alerts.csv")
+        if _os_nr.path.exists(_coord_path):
+            _df_coord = _pd_nr.read_csv(_coord_path)
+            if not _df_coord.empty:
+                st.dataframe(_df_coord.head(10), use_container_width=True)
+            else:
+                st.info("Sin alertas de coordinación recientes.")
+
+    st.markdown("---")
+    st.caption("🔗 Cruce OSINT · SIEG Política Nacional + Narrative Radar · © 2026 M. Castillo")
