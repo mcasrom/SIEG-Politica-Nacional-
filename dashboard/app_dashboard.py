@@ -946,7 +946,7 @@ with tab1:
 - Análisis OSINT basado en RSS de medios nacionales, autonómicos y locales.
 - Normalización 1 noticia × 1 partido detectado.
 - Detección de partidos mediante keywords, líderes y alias.
-- Análisis de sentimiento léxico (TextBlob / RoBERTa-ES).
+- Análisis de sentimiento con VADER ES (léxico político español adaptado). Motor: vaderSentiment + léxico propio de 80+ términos políticos. Precisión superior a TextBlob para texto político en español.
 - Indicadores aproximados, no deterministas.
 
 **Autoría:** M. Castillo · mybloggingnotes@gmail.com
@@ -1906,6 +1906,7 @@ app_dashboard.py        ← Este dashboard (Streamlit)
 | **🗺️ Tendencias por Territorio** | Análisis geográfico por comunidad autónoma: qué temas y narrativas dominan en cada territorio |
 | **🧭 Inteligencia Narrativa** | Análisis profundo por partido: ficha del líder, KPIs narrativos, rotación histórica, mapa de calor partido×narrativa, posicionamiento inferido |
 | **📖 Guía de uso** | Esta documentación |
+| **🔗 Cruce OSINT** | Comparativa cruzada entre Narrative Radar y SIEG Política Nacional: sentimiento, polarización, narrativas, bulos y alertas de coordinación |
 """)
 
     # ── Filtros del sidebar ───────────────────────────────────
@@ -1937,7 +1938,7 @@ o comparar solo cobertura positiva entre partidos.
     with st.expander("📐 Interpretación de indicadores"):
         st.markdown("""
 **Sentimiento medio (escala −1 a 1)**
-Promedio del score de sentimiento de todas las noticias del período.
+Promedio del score de sentimiento calculado con VADER ES — motor léxico adaptado al español político con más de 80 términos específicos (corrupción, escándalo, amnistía, lawfare, etc.). Más preciso que modelos genéricos para texto político.
 - Cercano a **+1** → cobertura predominantemente positiva
 - Cercano a **0** → cobertura neutral o equilibrada
 - Cercano a **−1** → cobertura predominantemente negativa
