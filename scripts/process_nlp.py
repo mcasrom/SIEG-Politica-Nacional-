@@ -5,7 +5,7 @@ import glob
 import datetime
 import sqlite3
 import hashlib
-from textblob import TextBlob
+from sentiment_vader_es import analizar_sentimiento as _vader_analizar
 
 BASE_DIR = os.path.expanduser("~/SIEG-Politica-Nacional")
 RAW_DIR = os.path.join(BASE_DIR, "data", "raw")
@@ -35,14 +35,13 @@ def detectar_partidos(texto, partidos_keywords):
     return partidos
 
 def analizar_sentimiento(texto):
-    blob = TextBlob(texto)
-    polaridad = blob.sentiment.polarity
+    label, polaridad = _vader_analizar(texto)
     if polaridad > 0:
-        return "POS", polaridad, 0, 1 - polaridad
+        return label, polaridad, 0, 1 - polaridad
     elif polaridad < 0:
-        return "NEG", 0, -polaridad, 1 + polaridad
+        return label, 0, -polaridad, 1 + polaridad
     else:
-        return "NEU", 0, 0, 1
+        return label, 0, 0, 1
 
 def init_db():
     conn = sqlite3.connect(DB_PATH)
