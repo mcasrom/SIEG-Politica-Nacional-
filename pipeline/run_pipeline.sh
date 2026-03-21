@@ -71,6 +71,16 @@ if [ -n "$_pdf" ]; then
     echo "[pdf_export] PDF copiado: $_pdf" >> "$LOG"
 fi
 
+# Export CSVs Narrative Radar para Tab 6 Cruce OSINT
+NR_PROC="/home/dietpi/narrative-radar/data/processed"
+NR_DEST="/home/dietpi/SIEG-Politica-Nacional/data/export/nr"
+mkdir -p "$NR_DEST"
+for f in narratives_summary sentiment_summary polarization_summary disinfo_bulos disinfo_alerts coordination_alerts ideology_summary; do
+    [ -f "$NR_PROC/${f}.csv" ] && cp "$NR_PROC/${f}.csv" "$NR_DEST/${f}.csv"
+done
+echo "[nr_export] CSVs NR copiados"
+
+
 # Export CSV y push a GitHub (para Streamlit Cloud)
 echo "[export] Exportando CSV..." >> "$LOG"
 source /home/dietpi/SIEG-Politica-Nacional/venv/bin/activate

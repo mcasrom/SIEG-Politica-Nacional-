@@ -2075,8 +2075,10 @@ with tab6:
     import pandas as _pd_nr
     import os as _os_nr
 
-    NR_DIR = _os_nr.path.expanduser("~/narrative-radar/data/processed")
-    _nr_ok = _os_nr.path.exists(NR_DIR)
+    NR_DIR_LOCAL = _os_nr.path.expanduser("~/narrative-radar/data/processed")
+    NR_DIR_CLOUD = _os_nr.path.join(BASE_DIR, "data", "export", "nr")
+    NR_DIR = NR_DIR_LOCAL if _os_nr.path.exists(NR_DIR_LOCAL) else NR_DIR_CLOUD
+    _nr_ok = _os_nr.path.exists(NR_DIR) and bool(_os_nr.listdir(NR_DIR)) if _os_nr.path.exists(NR_DIR) else False
 
     if not _nr_ok:
         st.info("ℹ️ Datos de Narrative Radar no disponibles en este entorno. "
