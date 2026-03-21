@@ -100,6 +100,17 @@ if _reports:
             mime="application/pdf"
         )
     st.sidebar.caption(os.path.basename(_reports[0])[14:27].replace("_", " "))
+
+# Botón descarga Excel semanal
+_xlsx_path = os.path.join(BASE_DIR, "data", "export", "ultimo_informe_semanal.xlsx")
+if os.path.exists(_xlsx_path):
+    with open(_xlsx_path, "rb") as _fx:
+        st.sidebar.download_button(
+            label="📊 Descargar Excel semanal",
+            data=_fx.read(),
+            file_name="SIEG_OSINT_Informe_Semanal.xlsx",
+            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        )
 else:
     st.sidebar.info("Sin informes generados aun.")
 
