@@ -289,6 +289,31 @@
       "name": "Noticias de Navarra",
       "url": "https://www.noticiasdenavarra.com/rss",
       "type": "regional"
+    },
+    {
+      "name": "El Salto",
+      "url": "https://www.elsaltodiario.com/rss",
+      "type": "nacional"
+    },
+    {
+      "name": "Cronica Global",
+      "url": "https://cronicaglobal.elespanol.com/rss/",
+      "type": "regional"
+    },
+    {
+      "name": "NacioDigital",
+      "url": "https://www.naciodigital.cat/rss/",
+      "type": "regional"
+    },
+    {
+      "name": "Vilaweb",
+      "url": "https://www.vilaweb.cat/feed/",
+      "type": "regional"
+    },
+    {
+      "name": "EITB",
+      "url": "https://www.eitb.eus/es/rss/noticias/",
+      "type": "regional"
     }
   ]
 }
