@@ -64,10 +64,10 @@ run_step "coocurrencias"   "$BASE/scripts/detect_coocurrencias.py"
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] Pipeline completado" >> "$LOG"
 
 # Copiar ultimo PDF al repo para Streamlit Cloud
-echo "[pdf_export] Copiando PDF al repo..." >> ""
-_pdf=
-if [ -n "" ]; then
-    cp "" "/data/export/ultimo_informe.pdf"
+echo "[pdf_export] Copiando PDF al repo..." >> "$LOG"
+_pdf=$(ls -t $BASE/data/reports/*.pdf 2>/dev/null | head -1)
+if [ -n "$_pdf" ]; then
+    cp "$_pdf" "$BASE/data/export/ultimo_informe.pdf"
     echo "[pdf_export] PDF copiado: " >> ""
 fi
 
