@@ -68,7 +68,7 @@ echo "[pdf_export] Copiando PDF al repo..." >> "$LOG"
 _pdf=$(ls -t $BASE/data/reports/*.pdf 2>/dev/null | head -1)
 if [ -n "$_pdf" ]; then
     cp "$_pdf" "$BASE/data/export/ultimo_informe.pdf"
-    echo "[pdf_export] PDF copiado: " >> ""
+    echo "[pdf_export] PDF copiado: $_pdf" >> "$LOG"
 fi
 
 # Export CSV y push a GitHub (para Streamlit Cloud)

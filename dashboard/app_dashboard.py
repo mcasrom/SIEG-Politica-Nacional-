@@ -546,7 +546,7 @@ with tab1:
             .properties(height=280)
         )
 
-    st.altair_chart(chart_vol, use_container_width=True)
+    st.altair_chart(chart_vol, width="stretch")
 
     st.markdown("---")
 
@@ -583,7 +583,7 @@ with tab1:
     )
 
     with c_sent1:
-        st.altair_chart(chart_bal, use_container_width=True)
+        st.altair_chart(chart_bal, width="stretch")
 
     # Distribución POS/NEU/NEG
     df_dist = (
@@ -614,7 +614,7 @@ with tab1:
     )
 
     with c_sent2:
-        st.altair_chart(chart_dist, use_container_width=True)
+        st.altair_chart(chart_dist, width="stretch")
 
     st.markdown("---")
 
@@ -641,7 +641,7 @@ with tab1:
         .properties(height=220)
     )
 
-    st.altair_chart(chart_fuente, use_container_width=True)
+    st.altair_chart(chart_fuente, width="stretch")
 
     st.markdown("---")
 
@@ -675,7 +675,7 @@ with tab1:
             .properties(height=max(200, len(df_terr_g["territorio"].unique()) * 22))
         )
 
-        st.altair_chart(chart_terr, use_container_width=True)
+        st.altair_chart(chart_terr, width="stretch")
 
     st.markdown("---")
 
@@ -723,7 +723,7 @@ with tab1:
             .properties(height=max(200, len(df_cooc) * 22))
         )
 
-        st.altair_chart(chart_cooc, use_container_width=True)
+        st.altair_chart(chart_cooc, width="stretch")
     else:
         st.info("No se detectaron coocurrencias en el período seleccionado.")
 
@@ -754,7 +754,7 @@ with tab1:
         .properties(height=320)
     )
 
-    st.altair_chart(chart_top, use_container_width=True)
+    st.altair_chart(chart_top, width="stretch")
 
     st.markdown("---")
 
@@ -767,7 +767,7 @@ with tab1:
 
     st.dataframe(
         df_f.sort_values("created_at", ascending=False)[cols_mostrar].head(50),
-        use_container_width=True
+        width="stretch"
     )
 
     # ---------------------------------------------------------
@@ -812,7 +812,7 @@ with tab1:
                 )
                 .properties(height=200, title="Volumen de ingesta diaria (últimos 30 días)")
             )
-            st.altair_chart(chart_ingesta, use_container_width=True)
+            st.altair_chart(chart_ingesta, width="stretch")
 
         st.caption("💡 Si los duplicados crecen, revisar el pipeline de deduplicación por hash_id.")
 
@@ -1381,7 +1381,7 @@ with tab4:
         .properties(height=250, title=f"Evolución sentimiento – {partido_sel}")
     )
 
-    st.altair_chart(chart_hist, use_container_width=True)
+    st.altair_chart(chart_hist, width="stretch")
 
     # --------------------------------------------------------
     # TEMAS MÁS USADOS
@@ -1404,7 +1404,7 @@ with tab4:
         .properties(height=350)
     )
 
-    st.altair_chart(chart_temas, use_container_width=True)
+    st.altair_chart(chart_temas, width="stretch")
 
     # --------------------------------------------------------
     # NARRATIVAS ACTIVAS
@@ -1430,7 +1430,7 @@ with tab4:
             )
             .properties(height=250)
         )
-        st.altair_chart(chart_narr, use_container_width=True)
+        st.altair_chart(chart_narr, width="stretch")
 
         for n, cnt in sorted(narr_counts.items(), key=lambda x: -x[1]):
             perfil = NARRATIVA_PERFIL.get(n, {})
@@ -1471,7 +1471,7 @@ with tab4:
         .properties(height=300)
     )
 
-    st.altair_chart(chart_rot, use_container_width=True)
+    st.altair_chart(chart_rot, width="stretch")
 
     st.markdown("---")
 
@@ -1507,7 +1507,7 @@ with tab4:
             )
             .properties(height=300)
         )
-        st.altair_chart(chart_heat_narr, use_container_width=True)
+        st.altair_chart(chart_heat_narr, width="stretch")
     else:
         st.info("No hay suficientes datos de narrativas para el mapa de calor.")
 
@@ -1547,7 +1547,7 @@ with tab4:
                 )
                 .properties(height=300, title="Noticias por territorio")
             )
-            st.altair_chart(chart_terr, use_container_width=True)
+            st.altair_chart(chart_terr, width="stretch")
 
     st.markdown("---")
 
@@ -1583,7 +1583,7 @@ with tab4:
         })
 
     df_resumen = pd.DataFrame(resumen)
-    st.dataframe(df_resumen, use_container_width=True)
+    st.dataframe(df_resumen, width="stretch")
 
     # --------------------------------------------------------
     # VISIÓN / POSICIONAMIENTO INFERIDO
@@ -1680,7 +1680,7 @@ with tab4:
                 )
                 .properties(height=280, title="CIS vs SIEG — misma escala −1 a +1")
             )
-            st.altair_chart(_chart_cis, use_container_width=True)
+            st.altair_chart(_chart_cis, width="stretch")
 
             # Gráfico de divergencia
             _chart_div = (
@@ -1702,12 +1702,12 @@ with tab4:
                 .properties(height=220,
                     title="Divergencia: naranja = prensa más favorable que CIS · azul = prensa más negativa")
             )
-            st.altair_chart(_chart_div, use_container_width=True)
+            st.altair_chart(_chart_div, width="stretch")
 
             # Tabla detallada
             st.dataframe(
                 _df_cis[["Líder","Partido","CIS","Mes CIS","Δ CIS","SIEG","Noticias","Divergencia"]],
-                use_container_width=True
+                width="stretch"
             )
 
             # Interpretación automática
@@ -2134,7 +2134,7 @@ with tab6:
                     )
                     .properties(height=250)
                 )
-                st.altair_chart(_chart_pol, use_container_width=True)
+                st.altair_chart(_chart_pol, width="stretch")
 
                 _last_pol = _df_pol.iloc[-1]
                 _col1, _col2, _col3 = st.columns(3)
@@ -2183,7 +2183,7 @@ with tab6:
         if _os_nr.path.exists(_bulos_path):
             _df_bulos = _pd_nr.read_csv(_bulos_path)
             if not _df_bulos.empty:
-                st.dataframe(_df_bulos.head(10), use_container_width=True)
+                st.dataframe(_df_bulos.head(10), width="stretch")
             else:
                 st.info("Sin bulos detectados recientemente.")
 
@@ -2196,7 +2196,7 @@ with tab6:
         if _os_nr.path.exists(_coord_path):
             _df_coord = _pd_nr.read_csv(_coord_path)
             if not _df_coord.empty:
-                st.dataframe(_df_coord.head(10), use_container_width=True)
+                st.dataframe(_df_coord.head(10), width="stretch")
             else:
                 st.info("Sin alertas de coordinación recientes.")
 
