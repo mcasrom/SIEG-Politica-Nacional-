@@ -103,3 +103,8 @@ echo [pdf] Informe generado >> $LOG
 echo [telegram] Enviando resumen al canal... >> $LOG
 python3 $BASE/scripts/telegram_notify.py >> $LOG 2>&1
 echo [telegram] Notificación completada >> $LOG
+
+# Alertas de spike
+echo [spike] Detectando spikes... >> $LOG
+python3 $BASE/scripts/spike_alerts.py >> $LOG 2>&1
+echo [spike] Completado >> $LOG
