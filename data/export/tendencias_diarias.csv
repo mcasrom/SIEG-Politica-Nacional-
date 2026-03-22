@@ -45,15 +45,18 @@ fecha,tipo,clave,total
 2026-03-21,tema,seguridad,68
 2026-03-21,tema,medioambiente,38
 2026-03-21,tema,sanidad,35
-2026-03-22,tema,politica,12
-2026-03-22,tema,internacional,30
-2026-03-22,tema,inmigracion,6
-2026-03-22,tema,economia,7
-2026-03-22,tema,justicia,6
-2026-03-22,tema,vivienda,11
-2026-03-22,tema,seguridad,6
-2026-03-22,tema,genero,7
-2026-03-22,tema,otros,1
+2026-03-22,tema,politica,166
+2026-03-22,tema,internacional,226
+2026-03-22,tema,inmigracion,51
+2026-03-22,tema,economia,106
+2026-03-22,tema,justicia,131
+2026-03-22,tema,vivienda,104
+2026-03-22,tema,seguridad,63
+2026-03-22,tema,genero,113
+2026-03-22,tema,otros,7
+2026-03-22,tema,medioambiente,27
+2026-03-22,tema,sanidad,74
+2026-03-22,tema,educacion,92
 2026-03-18,narrativa,corrupcion,8
 2026-03-19,narrativa,inseguridad,54
 2026-03-19,narrativa,crisis_economica,35
@@ -84,8 +87,13 @@ fecha,tipo,clave,total
 2026-03-21,narrativa,crisis_territorial,20
 2026-03-21,narrativa,feminismo,5
 2026-03-21,narrativa,ocupacion,2
-2026-03-22,narrativa,corrupcion,8
-2026-03-22,narrativa,inseguridad,3
+2026-03-22,narrativa,corrupcion,118
+2026-03-22,narrativa,inseguridad,8
+2026-03-22,narrativa,inmigracion_ilegal,15
+2026-03-22,narrativa,ocupacion,20
+2026-03-22,narrativa,feminismo,15
+2026-03-22,narrativa,crisis_territorial,7
+2026-03-22,narrativa,crisis_economica,10
 2026-03-18,partido,SUMAR,18
 2026-03-18,partido,ERC,33
 2026-03-18,partido,PP,55
@@ -137,10 +145,16 @@ fecha,tipo,clave,total
 2026-03-21,partido,CUP,28
 2026-03-21,partido,MÁS MADRID,2
 2026-03-21,partido,CC,2
-2026-03-22,partido,VOX,1
-2026-03-22,partido,PSOE,3
-2026-03-22,partido,ERC,20
-2026-03-22,partido,PP,4
-2026-03-22,partido,CUP,1
-2026-03-22,partido,PODEMOS,1
-2026-03-22,partido,PNV,1
+2026-03-22,partido,VOX,16
+2026-03-22,partido,PSOE,23
+2026-03-22,partido,ERC,68
+2026-03-22,partido,PP,42
+2026-03-22,partido,CUP,26
+2026-03-22,partido,PODEMOS,18
+2026-03-22,partido,PNV,6
+2026-03-22,partido,SUMAR,15
+2026-03-22,partido,JUNTS,2
+2026-03-22,partido,Cs,6
+2026-03-22,partido,MÁS MADRID,4
+2026-03-22,partido,EH BILDU,7
+2026-03-22,partido,BNG,1
