@@ -45,18 +45,18 @@ fecha,tipo,clave,total
 2026-03-21,tema,seguridad,68
 2026-03-21,tema,medioambiente,38
 2026-03-21,tema,sanidad,35
-2026-03-22,tema,politica,220
-2026-03-22,tema,internacional,338
-2026-03-22,tema,inmigracion,64
-2026-03-22,tema,economia,136
-2026-03-22,tema,justicia,154
-2026-03-22,tema,vivienda,136
-2026-03-22,tema,seguridad,92
-2026-03-22,tema,genero,138
-2026-03-22,tema,otros,20
+2026-03-22,tema,politica,267
+2026-03-22,tema,internacional,409
+2026-03-22,tema,inmigracion,68
+2026-03-22,tema,economia,153
+2026-03-22,tema,justicia,165
+2026-03-22,tema,vivienda,153
+2026-03-22,tema,seguridad,116
+2026-03-22,tema,genero,158
+2026-03-22,tema,otros,30
 2026-03-22,tema,medioambiente,31
-2026-03-22,tema,sanidad,88
-2026-03-22,tema,educacion,97
+2026-03-22,tema,sanidad,107
+2026-03-22,tema,educacion,117
 2026-03-18,narrativa,corrupcion,8
 2026-03-19,narrativa,inseguridad,54
 2026-03-19,narrativa,crisis_economica,35
@@ -87,13 +87,13 @@ fecha,tipo,clave,total
 2026-03-21,narrativa,crisis_territorial,20
 2026-03-21,narrativa,feminismo,5
 2026-03-21,narrativa,ocupacion,2
-2026-03-22,narrativa,corrupcion,140
-2026-03-22,narrativa,inseguridad,9
+2026-03-22,narrativa,corrupcion,149
+2026-03-22,narrativa,inseguridad,10
 2026-03-22,narrativa,inmigracion_ilegal,19
 2026-03-22,narrativa,ocupacion,22
 2026-03-22,narrativa,feminismo,15
 2026-03-22,narrativa,crisis_territorial,7
-2026-03-22,narrativa,crisis_economica,10
+2026-03-22,narrativa,crisis_economica,15
 2026-03-18,partido,SUMAR,18
 2026-03-18,partido,ERC,33
 2026-03-18,partido,PP,55
@@ -145,16 +145,17 @@ fecha,tipo,clave,total
 2026-03-21,partido,CUP,28
 2026-03-21,partido,MÁS MADRID,2
 2026-03-21,partido,CC,2
-2026-03-22,partido,VOX,28
-2026-03-22,partido,PSOE,27
-2026-03-22,partido,ERC,126
-2026-03-22,partido,PP,63
-2026-03-22,partido,CUP,34
-2026-03-22,partido,PODEMOS,23
-2026-03-22,partido,PNV,8
-2026-03-22,partido,SUMAR,21
-2026-03-22,partido,JUNTS,10
-2026-03-22,partido,Cs,8
+2026-03-22,partido,VOX,32
+2026-03-22,partido,PSOE,37
+2026-03-22,partido,ERC,159
+2026-03-22,partido,PP,76
+2026-03-22,partido,CUP,39
+2026-03-22,partido,PODEMOS,26
+2026-03-22,partido,PNV,9
+2026-03-22,partido,SUMAR,27
+2026-03-22,partido,JUNTS,11
+2026-03-22,partido,Cs,10
 2026-03-22,partido,MÁS MADRID,4
-2026-03-22,partido,EH BILDU,8
+2026-03-22,partido,EH BILDU,11
 2026-03-22,partido,BNG,1
+2026-03-22,partido,SALF,1
