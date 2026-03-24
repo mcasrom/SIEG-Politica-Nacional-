@@ -69,17 +69,18 @@ fecha,tipo,clave,total
 2026-03-23,tema,medioambiente,31
 2026-03-23,tema,educacion,152
 2026-03-23,tema,inmigracion,67
-2026-03-24,tema,internacional,53
-2026-03-24,tema,politica,18
-2026-03-24,tema,economia,14
-2026-03-24,tema,justicia,6
-2026-03-24,tema,educacion,4
-2026-03-24,tema,vivienda,3
-2026-03-24,tema,genero,9
-2026-03-24,tema,sanidad,4
-2026-03-24,tema,otros,2
-2026-03-24,tema,seguridad,3
-2026-03-24,tema,inmigracion,1
+2026-03-24,tema,internacional,305
+2026-03-24,tema,politica,190
+2026-03-24,tema,economia,136
+2026-03-24,tema,justicia,152
+2026-03-24,tema,educacion,89
+2026-03-24,tema,vivienda,96
+2026-03-24,tema,genero,123
+2026-03-24,tema,sanidad,56
+2026-03-24,tema,otros,7
+2026-03-24,tema,seguridad,73
+2026-03-24,tema,inmigracion,50
+2026-03-24,tema,medioambiente,4
 2026-03-18,narrativa,corrupcion,8
 2026-03-19,narrativa,inseguridad,54
 2026-03-19,narrativa,crisis_economica,35
@@ -127,8 +128,14 @@ fecha,tipo,clave,total
 2026-03-23,narrativa,amnistia,7
 2026-03-23,narrativa,crisis_territorial,25
 2026-03-23,narrativa,ocupacion,10
-2026-03-24,narrativa,corrupcion,4
-2026-03-24,narrativa,crisis_territorial,1
+2026-03-24,narrativa,corrupcion,112
+2026-03-24,narrativa,crisis_territorial,9
+2026-03-24,narrativa,inseguridad,18
+2026-03-24,narrativa,crisis_economica,17
+2026-03-24,narrativa,inmigracion_ilegal,15
+2026-03-24,narrativa,feminismo,11
+2026-03-24,narrativa,golpe_estado,15
+2026-03-24,narrativa,ocupacion,19
 2026-03-18,partido,SUMAR,18
 2026-03-18,partido,ERC,33
 2026-03-18,partido,PP,55
@@ -207,12 +214,16 @@ fecha,tipo,clave,total
 2026-03-23,partido,BNG,1
 2026-03-23,partido,MÁS MADRID,2
 2026-03-23,partido,PNV,4
-2026-03-24,partido,PP,7
-2026-03-24,partido,CUP,5
-2026-03-24,partido,ERC,23
-2026-03-24,partido,PSOE,11
-2026-03-24,partido,SUMAR,5
-2026-03-24,partido,JUNTS,2
-2026-03-24,partido,EH BILDU,1
-2026-03-24,partido,PODEMOS,1
-2026-03-24,partido,VOX,3
+2026-03-24,partido,PP,49
+2026-03-24,partido,CUP,29
+2026-03-24,partido,ERC,121
+2026-03-24,partido,PSOE,38
+2026-03-24,partido,SUMAR,20
+2026-03-24,partido,JUNTS,6
+2026-03-24,partido,EH BILDU,6
+2026-03-24,partido,PODEMOS,15
+2026-03-24,partido,VOX,20
+2026-03-24,partido,PNV,5
+2026-03-24,partido,Cs,7
+2026-03-24,partido,BNG,3
+2026-03-24,partido,MÁS MADRID,2
