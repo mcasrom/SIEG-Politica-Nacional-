@@ -105,6 +105,18 @@ fecha,tipo,clave,total
 2026-03-26,tema,genero,235
 2026-03-26,tema,seguridad,164
 2026-03-26,tema,medioambiente,29
+2026-03-27,tema,politica,17
+2026-03-27,tema,internacional,49
+2026-03-27,tema,seguridad,19
+2026-03-27,tema,justicia,4
+2026-03-27,tema,economia,11
+2026-03-27,tema,inmigracion,5
+2026-03-27,tema,sanidad,5
+2026-03-27,tema,genero,6
+2026-03-27,tema,vivienda,3
+2026-03-27,tema,medioambiente,2
+2026-03-27,tema,educacion,9
+2026-03-27,tema,otros,2
 2026-03-18,narrativa,corrupcion,8
 2026-03-19,narrativa,inseguridad,54
 2026-03-19,narrativa,crisis_economica,35
@@ -178,6 +190,8 @@ fecha,tipo,clave,total
 2026-03-26,narrativa,crisis_economica,8
 2026-03-26,narrativa,feminismo,3
 2026-03-26,narrativa,pucherazo,2
+2026-03-27,narrativa,inseguridad,4
+2026-03-27,narrativa,corrupcion,2
 2026-03-18,partido,SUMAR,18
 2026-03-18,partido,ERC,33
 2026-03-18,partido,PP,55
@@ -299,3 +313,11 @@ fecha,tipo,clave,total
 2026-03-26,partido,Cs,23
 2026-03-26,partido,BNG,4
 2026-03-26,partido,MÁS MADRID,2
+2026-03-27,partido,PSOE,7
+2026-03-27,partido,PODEMOS,12
+2026-03-27,partido,PP,6
+2026-03-27,partido,ERC,23
+2026-03-27,partido,VOX,2
+2026-03-27,partido,SUMAR,1
+2026-03-27,partido,CUP,3
+2026-03-27,partido,PNV,1
