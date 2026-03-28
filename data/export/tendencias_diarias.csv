@@ -129,6 +129,13 @@ fecha,tipo,clave,total
 2026-03-28,tema,inmigracion,48
 2026-03-28,tema,otros,7
 2026-03-28,tema,medioambiente,29
+2026-03-29,tema,internacional,17
+2026-03-29,tema,otros,5
+2026-03-29,tema,genero,4
+2026-03-29,tema,medioambiente,4
+2026-03-29,tema,educacion,1
+2026-03-29,tema,politica,4
+2026-03-29,tema,inmigracion,1
 2026-03-18,narrativa,corrupcion,8
 2026-03-19,narrativa,inseguridad,54
 2026-03-19,narrativa,crisis_economica,35
@@ -366,3 +373,10 @@ fecha,tipo,clave,total
 2026-03-28,partido,Cs,10
 2026-03-28,partido,MÁS MADRID,2
 2026-03-28,partido,BNG,1
+2026-03-29,partido,ERC,13
+2026-03-29,partido,CUP,2
+2026-03-29,partido,PODEMOS,1
+2026-03-29,partido,EH BILDU,1
+2026-03-29,partido,VOX,2
+2026-03-29,partido,SUMAR,2
+2026-03-29,partido,PP,1
