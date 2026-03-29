@@ -129,13 +129,18 @@ fecha,tipo,clave,total
 2026-03-28,tema,inmigracion,48
 2026-03-28,tema,otros,7
 2026-03-28,tema,medioambiente,29
-2026-03-29,tema,internacional,17
-2026-03-29,tema,otros,5
-2026-03-29,tema,genero,4
-2026-03-29,tema,medioambiente,4
-2026-03-29,tema,educacion,1
-2026-03-29,tema,politica,4
-2026-03-29,tema,inmigracion,1
+2026-03-29,tema,internacional,199
+2026-03-29,tema,otros,7
+2026-03-29,tema,genero,108
+2026-03-29,tema,medioambiente,17
+2026-03-29,tema,educacion,75
+2026-03-29,tema,politica,138
+2026-03-29,tema,inmigracion,43
+2026-03-29,tema,economia,126
+2026-03-29,tema,sanidad,49
+2026-03-29,tema,seguridad,70
+2026-03-29,tema,justicia,119
+2026-03-29,tema,vivienda,62
 2026-03-18,narrativa,corrupcion,8
 2026-03-19,narrativa,inseguridad,54
 2026-03-19,narrativa,crisis_economica,35
@@ -226,6 +231,15 @@ fecha,tipo,clave,total
 2026-03-28,narrativa,feminismo,7
 2026-03-28,narrativa,amnistia,5
 2026-03-28,narrativa,lawfare,1
+2026-03-29,narrativa,crisis_economica,14
+2026-03-29,narrativa,corrupcion,108
+2026-03-29,narrativa,amnistia,10
+2026-03-29,narrativa,crisis_territorial,20
+2026-03-29,narrativa,inseguridad,11
+2026-03-29,narrativa,feminismo,4
+2026-03-29,narrativa,ocupacion,14
+2026-03-29,narrativa,golpe_estado,3
+2026-03-29,narrativa,inmigracion_ilegal,8
 2026-03-18,partido,SUMAR,18
 2026-03-18,partido,ERC,33
 2026-03-18,partido,PP,55
@@ -373,10 +387,17 @@ fecha,tipo,clave,total
 2026-03-28,partido,Cs,10
 2026-03-28,partido,MÁS MADRID,2
 2026-03-28,partido,BNG,1
-2026-03-29,partido,ERC,13
-2026-03-29,partido,CUP,2
-2026-03-29,partido,PODEMOS,1
-2026-03-29,partido,EH BILDU,1
-2026-03-29,partido,VOX,2
-2026-03-29,partido,SUMAR,2
-2026-03-29,partido,PP,1
+2026-03-29,partido,ERC,69
+2026-03-29,partido,CUP,31
+2026-03-29,partido,PODEMOS,16
+2026-03-29,partido,EH BILDU,6
+2026-03-29,partido,VOX,11
+2026-03-29,partido,SUMAR,13
+2026-03-29,partido,PP,29
+2026-03-29,partido,PSOE,15
+2026-03-29,partido,PNV,1
+2026-03-29,partido,SALF,1
+2026-03-29,partido,Cs,11
+2026-03-29,partido,JUNTS,2
+2026-03-29,partido,BNG,1
+2026-03-29,partido,MÁS MADRID,2
