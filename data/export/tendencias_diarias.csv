@@ -153,6 +153,18 @@ fecha,tipo,clave,total
 2026-03-30,tema,medioambiente,10
 2026-03-30,tema,genero,108
 2026-03-30,tema,economia,100
+2026-03-31,tema,internacional,156
+2026-03-31,tema,politica,83
+2026-03-31,tema,seguridad,32
+2026-03-31,tema,economia,43
+2026-03-31,tema,justicia,64
+2026-03-31,tema,genero,29
+2026-03-31,tema,vivienda,13
+2026-03-31,tema,sanidad,6
+2026-03-31,tema,educacion,35
+2026-03-31,tema,inmigracion,7
+2026-03-31,tema,medioambiente,2
+2026-03-31,tema,otros,7
 2026-03-18,narrativa,corrupcion,8
 2026-03-19,narrativa,inseguridad,54
 2026-03-19,narrativa,crisis_economica,35
@@ -262,6 +274,13 @@ fecha,tipo,clave,total
 2026-03-30,narrativa,vivienda_emergencia,3
 2026-03-30,narrativa,crisis_territorial,14
 2026-03-30,narrativa,amnistia,7
+2026-03-31,narrativa,crisis_economica,2
+2026-03-31,narrativa,feminismo,1
+2026-03-31,narrativa,corrupcion,40
+2026-03-31,narrativa,lawfare,7
+2026-03-31,narrativa,inseguridad,6
+2026-03-31,narrativa,inmigracion_ilegal,4
+2026-03-31,narrativa,crisis_territorial,1
 2026-03-18,partido,SUMAR,18
 2026-03-18,partido,ERC,33
 2026-03-18,partido,PP,55
@@ -435,3 +454,13 @@ fecha,tipo,clave,total
 2026-03-30,partido,SUMAR,13
 2026-03-30,partido,SALF,1
 2026-03-30,partido,JUNTS,7
+2026-03-31,partido,ERC,79
+2026-03-31,partido,SUMAR,11
+2026-03-31,partido,PODEMOS,8
+2026-03-31,partido,PP,25
+2026-03-31,partido,VOX,7
+2026-03-31,partido,PSOE,20
+2026-03-31,partido,CUP,12
+2026-03-31,partido,Cs,3
+2026-03-31,partido,JUNTS,2
+2026-03-31,partido,MÁS MADRID,1
