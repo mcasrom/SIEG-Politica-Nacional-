@@ -177,6 +177,18 @@ fecha,tipo,clave,total
 2026-04-01,tema,genero,133
 2026-04-01,tema,sanidad,60
 2026-04-01,tema,inmigracion,38
+2026-04-02,tema,justicia,7
+2026-04-02,tema,sanidad,1
+2026-04-02,tema,politica,11
+2026-04-02,tema,internacional,26
+2026-04-02,tema,genero,2
+2026-04-02,tema,inmigracion,3
+2026-04-02,tema,medioambiente,1
+2026-04-02,tema,vivienda,4
+2026-04-02,tema,otros,1
+2026-04-02,tema,educacion,6
+2026-04-02,tema,economia,2
+2026-04-02,tema,seguridad,1
 2026-03-18,narrativa,corrupcion,8
 2026-03-19,narrativa,inseguridad,54
 2026-03-19,narrativa,crisis_economica,35
@@ -305,6 +317,8 @@ fecha,tipo,clave,total
 2026-04-01,narrativa,feminismo,3
 2026-04-01,narrativa,ocupacion,14
 2026-04-01,narrativa,crisis_economica,11
+2026-04-02,narrativa,inmigracion_ilegal,1
+2026-04-02,narrativa,corrupcion,2
 2026-03-18,partido,SUMAR,18
 2026-03-18,partido,ERC,33
 2026-03-18,partido,PP,55
@@ -502,3 +516,11 @@ fecha,tipo,clave,total
 2026-04-01,partido,Cs,11
 2026-04-01,partido,EH BILDU,10
 2026-04-01,partido,PNV,6
+2026-04-02,partido,ERC,11
+2026-04-02,partido,BNG,1
+2026-04-02,partido,SUMAR,3
+2026-04-02,partido,VOX,3
+2026-04-02,partido,PODEMOS,2
+2026-04-02,partido,PP,5
+2026-04-02,partido,PSOE,2
+2026-04-02,partido,CUP,2
