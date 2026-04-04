@@ -201,18 +201,18 @@ fecha,tipo,clave,total
 2026-04-03,tema,justicia,105
 2026-04-03,tema,sanidad,62
 2026-04-03,tema,otros,4
-2026-04-04,tema,internacional,280
-2026-04-04,tema,medioambiente,18
-2026-04-04,tema,economia,128
-2026-04-04,tema,politica,184
-2026-04-04,tema,vivienda,57
-2026-04-04,tema,otros,10
-2026-04-04,tema,genero,105
-2026-04-04,tema,justicia,141
-2026-04-04,tema,educacion,88
-2026-04-04,tema,sanidad,45
-2026-04-04,tema,seguridad,57
-2026-04-04,tema,inmigracion,25
+2026-04-04,tema,internacional,349
+2026-04-04,tema,medioambiente,20
+2026-04-04,tema,economia,141
+2026-04-04,tema,politica,203
+2026-04-04,tema,vivienda,62
+2026-04-04,tema,otros,16
+2026-04-04,tema,genero,119
+2026-04-04,tema,justicia,159
+2026-04-04,tema,educacion,99
+2026-04-04,tema,sanidad,47
+2026-04-04,tema,seguridad,64
+2026-04-04,tema,inmigracion,27
 2026-03-18,narrativa,corrupcion,8
 2026-03-19,narrativa,inseguridad,54
 2026-03-19,narrativa,crisis_economica,35
@@ -359,7 +359,7 @@ fecha,tipo,clave,total
 2026-04-03,narrativa,feminismo,4
 2026-04-03,narrativa,golpe_estado,3
 2026-04-03,narrativa,crisis_economica,7
-2026-04-04,narrativa,corrupcion,122
+2026-04-04,narrativa,corrupcion,138
 2026-04-04,narrativa,amnistia,7
 2026-04-04,narrativa,inseguridad,13
 2026-04-04,narrativa,crisis_economica,10
@@ -589,15 +589,15 @@ fecha,tipo,clave,total
 2026-04-03,partido,BNG,1
 2026-04-03,partido,VOX,10
 2026-04-03,partido,PNV,1
-2026-04-04,partido,ERC,106
-2026-04-04,partido,EH BILDU,4
-2026-04-04,partido,SUMAR,11
-2026-04-04,partido,PODEMOS,24
-2026-04-04,partido,PSOE,19
-2026-04-04,partido,VOX,20
-2026-04-04,partido,CUP,33
-2026-04-04,partido,PP,57
-2026-04-04,partido,JUNTS,5
+2026-04-04,partido,ERC,147
+2026-04-04,partido,EH BILDU,5
+2026-04-04,partido,SUMAR,20
+2026-04-04,partido,PODEMOS,30
+2026-04-04,partido,PSOE,25
+2026-04-04,partido,VOX,21
+2026-04-04,partido,CUP,35
+2026-04-04,partido,PP,71
+2026-04-04,partido,JUNTS,6
 2026-04-04,partido,Cs,9
-2026-04-04,partido,PNV,1
+2026-04-04,partido,PNV,2
 2026-04-04,partido,MÁS MADRID,2
