@@ -225,18 +225,18 @@ fecha,tipo,clave,total
 2026-04-05,tema,educacion,112
 2026-04-05,tema,economia,139
 2026-04-05,tema,medioambiente,32
-2026-04-06,tema,justicia,185
-2026-04-06,tema,sanidad,48
-2026-04-06,tema,seguridad,63
-2026-04-06,tema,politica,217
-2026-04-06,tema,internacional,343
-2026-04-06,tema,genero,87
-2026-04-06,tema,otros,19
-2026-04-06,tema,inmigracion,51
-2026-04-06,tema,economia,134
-2026-04-06,tema,vivienda,82
-2026-04-06,tema,medioambiente,4
-2026-04-06,tema,educacion,69
+2026-04-06,tema,justicia,232
+2026-04-06,tema,sanidad,56
+2026-04-06,tema,seguridad,80
+2026-04-06,tema,politica,291
+2026-04-06,tema,internacional,489
+2026-04-06,tema,genero,112
+2026-04-06,tema,otros,23
+2026-04-06,tema,inmigracion,65
+2026-04-06,tema,economia,154
+2026-04-06,tema,vivienda,90
+2026-04-06,tema,medioambiente,6
+2026-04-06,tema,educacion,93
 2026-03-18,narrativa,corrupcion,8
 2026-03-19,narrativa,inseguridad,54
 2026-03-19,narrativa,crisis_economica,35
@@ -402,9 +402,9 @@ fecha,tipo,clave,total
 2026-04-05,narrativa,inseguridad,14
 2026-04-05,narrativa,golpe_estado,4
 2026-04-05,narrativa,vivienda_emergencia,2
-2026-04-06,narrativa,inmigracion_ilegal,32
-2026-04-06,narrativa,corrupcion,136
-2026-04-06,narrativa,inseguridad,6
+2026-04-06,narrativa,inmigracion_ilegal,40
+2026-04-06,narrativa,corrupcion,172
+2026-04-06,narrativa,inseguridad,7
 2026-04-06,narrativa,ocupacion,12
 2026-04-06,narrativa,vivienda_emergencia,4
 2026-04-06,narrativa,crisis_territorial,11
@@ -653,15 +653,16 @@ fecha,tipo,clave,total
 2026-04-05,partido,EH BILDU,6
 2026-04-05,partido,BNG,3
 2026-04-05,partido,PNV,8
-2026-04-06,partido,ERC,131
-2026-04-06,partido,EH BILDU,9
-2026-04-06,partido,SUMAR,22
-2026-04-06,partido,JUNTS,2
-2026-04-06,partido,PSOE,53
-2026-04-06,partido,CUP,34
-2026-04-06,partido,VOX,16
-2026-04-06,partido,PP,86
-2026-04-06,partido,PODEMOS,14
+2026-04-06,partido,ERC,181
+2026-04-06,partido,EH BILDU,11
+2026-04-06,partido,SUMAR,30
+2026-04-06,partido,JUNTS,3
+2026-04-06,partido,PSOE,73
+2026-04-06,partido,CUP,41
+2026-04-06,partido,VOX,27
+2026-04-06,partido,PP,117
+2026-04-06,partido,PODEMOS,32
 2026-04-06,partido,Cs,6
 2026-04-06,partido,CC,1
-2026-04-06,partido,PNV,2
+2026-04-06,partido,PNV,5
+2026-04-06,partido,MÁS MADRID,1
