@@ -261,14 +261,18 @@ fecha,tipo,clave,total
 2026-04-08,tema,medioambiente,29
 2026-04-08,tema,inmigracion,68
 2026-04-08,tema,seguridad,94
-2026-04-09,tema,otros,4
-2026-04-09,tema,economia,3
-2026-04-09,tema,politica,14
-2026-04-09,tema,internacional,26
-2026-04-09,tema,justicia,6
-2026-04-09,tema,genero,2
-2026-04-09,tema,sanidad,4
-2026-04-09,tema,vivienda,1
+2026-04-09,tema,otros,5
+2026-04-09,tema,economia,81
+2026-04-09,tema,politica,143
+2026-04-09,tema,internacional,223
+2026-04-09,tema,justicia,123
+2026-04-09,tema,genero,90
+2026-04-09,tema,sanidad,30
+2026-04-09,tema,vivienda,54
+2026-04-09,tema,inmigracion,22
+2026-04-09,tema,seguridad,51
+2026-04-09,tema,medioambiente,8
+2026-04-09,tema,educacion,71
 2026-03-18,narrativa,corrupcion,8
 2026-03-19,narrativa,inseguridad,54
 2026-03-19,narrativa,crisis_economica,35
@@ -459,7 +463,15 @@ fecha,tipo,clave,total
 2026-04-08,narrativa,crisis_economica,8
 2026-04-08,narrativa,lawfare,3
 2026-04-08,narrativa,feminismo,4
-2026-04-09,narrativa,corrupcion,5
+2026-04-09,narrativa,corrupcion,116
+2026-04-09,narrativa,inmigracion_ilegal,3
+2026-04-09,narrativa,feminismo,3
+2026-04-09,narrativa,inseguridad,15
+2026-04-09,narrativa,golpe_estado,3
+2026-04-09,narrativa,crisis_economica,8
+2026-04-09,narrativa,ocupacion,4
+2026-04-09,narrativa,vivienda_emergencia,1
+2026-04-09,narrativa,crisis_territorial,4
 2026-03-18,partido,SUMAR,18
 2026-03-18,partido,ERC,33
 2026-03-18,partido,PP,55
@@ -745,10 +757,15 @@ fecha,tipo,clave,total
 2026-04-08,partido,BNG,1
 2026-04-08,partido,MÁS MADRID,2
 2026-04-08,partido,CC,1
-2026-04-09,partido,PSOE,5
-2026-04-09,partido,PP,4
-2026-04-09,partido,PODEMOS,1
-2026-04-09,partido,VOX,2
-2026-04-09,partido,ERC,15
-2026-04-09,partido,CUP,2
-2026-04-09,partido,SUMAR,1
+2026-04-09,partido,PSOE,16
+2026-04-09,partido,PP,43
+2026-04-09,partido,PODEMOS,14
+2026-04-09,partido,VOX,14
+2026-04-09,partido,ERC,88
+2026-04-09,partido,CUP,27
+2026-04-09,partido,SUMAR,10
+2026-04-09,partido,JUNTS,3
+2026-04-09,partido,PNV,5
+2026-04-09,partido,EH BILDU,7
+2026-04-09,partido,Cs,3
+2026-04-09,partido,MÁS MADRID,1
