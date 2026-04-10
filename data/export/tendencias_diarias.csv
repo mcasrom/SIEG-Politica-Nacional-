@@ -273,16 +273,18 @@ fecha,tipo,clave,total
 2026-04-09,tema,seguridad,89
 2026-04-09,tema,medioambiente,23
 2026-04-09,tema,educacion,111
-2026-04-10,tema,justicia,19
-2026-04-10,tema,internacional,42
-2026-04-10,tema,politica,27
-2026-04-10,tema,seguridad,3
-2026-04-10,tema,genero,6
-2026-04-10,tema,educacion,11
+2026-04-10,tema,justicia,112
+2026-04-10,tema,internacional,229
+2026-04-10,tema,politica,146
+2026-04-10,tema,seguridad,65
+2026-04-10,tema,genero,75
+2026-04-10,tema,educacion,66
 2026-04-10,tema,otros,1
-2026-04-10,tema,vivienda,8
-2026-04-10,tema,economia,1
-2026-04-10,tema,medioambiente,1
+2026-04-10,tema,vivienda,72
+2026-04-10,tema,economia,72
+2026-04-10,tema,medioambiente,7
+2026-04-10,tema,inmigracion,38
+2026-04-10,tema,sanidad,36
 2026-03-18,narrativa,corrupcion,8
 2026-03-19,narrativa,inseguridad,54
 2026-03-19,narrativa,crisis_economica,35
@@ -483,9 +485,15 @@ fecha,tipo,clave,total
 2026-04-09,narrativa,vivienda_emergencia,10
 2026-04-09,narrativa,crisis_territorial,8
 2026-04-09,narrativa,amnistia,3
-2026-04-10,narrativa,feminismo,4
-2026-04-10,narrativa,corrupcion,5
-2026-04-10,narrativa,crisis_territorial,7
+2026-04-10,narrativa,feminismo,18
+2026-04-10,narrativa,corrupcion,83
+2026-04-10,narrativa,crisis_territorial,15
+2026-04-10,narrativa,inseguridad,4
+2026-04-10,narrativa,vivienda_emergencia,4
+2026-04-10,narrativa,inmigracion_ilegal,3
+2026-04-10,narrativa,ocupacion,4
+2026-04-10,narrativa,crisis_economica,2
+2026-04-10,narrativa,amnistia,3
 2026-03-18,partido,SUMAR,18
 2026-03-18,partido,ERC,33
 2026-03-18,partido,PP,55
@@ -783,11 +791,14 @@ fecha,tipo,clave,total
 2026-04-09,partido,EH BILDU,12
 2026-04-09,partido,Cs,9
 2026-04-09,partido,MÁS MADRID,2
-2026-04-10,partido,PSOE,6
-2026-04-10,partido,ERC,18
-2026-04-10,partido,PODEMOS,7
-2026-04-10,partido,VOX,5
-2026-04-10,partido,PP,3
-2026-04-10,partido,SUMAR,4
-2026-04-10,partido,EH BILDU,1
-2026-04-10,partido,CUP,1
+2026-04-10,partido,PSOE,23
+2026-04-10,partido,ERC,94
+2026-04-10,partido,PODEMOS,19
+2026-04-10,partido,VOX,16
+2026-04-10,partido,PP,39
+2026-04-10,partido,SUMAR,12
+2026-04-10,partido,EH BILDU,3
+2026-04-10,partido,CUP,18
+2026-04-10,partido,PNV,1
+2026-04-10,partido,Cs,7
+2026-04-10,partido,JUNTS,2
