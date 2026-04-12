@@ -297,18 +297,18 @@ fecha,tipo,clave,total
 2026-04-11,tema,inmigracion,30
 2026-04-11,tema,medioambiente,36
 2026-04-11,tema,sanidad,62
-2026-04-12,tema,politica,163
-2026-04-12,tema,internacional,265
-2026-04-12,tema,justicia,124
-2026-04-12,tema,sanidad,53
-2026-04-12,tema,vivienda,72
-2026-04-12,tema,genero,102
-2026-04-12,tema,educacion,63
-2026-04-12,tema,otros,10
-2026-04-12,tema,economia,95
-2026-04-12,tema,inmigracion,40
-2026-04-12,tema,seguridad,76
-2026-04-12,tema,medioambiente,14
+2026-04-12,tema,politica,211
+2026-04-12,tema,internacional,361
+2026-04-12,tema,justicia,161
+2026-04-12,tema,sanidad,69
+2026-04-12,tema,vivienda,98
+2026-04-12,tema,genero,119
+2026-04-12,tema,educacion,77
+2026-04-12,tema,otros,11
+2026-04-12,tema,economia,121
+2026-04-12,tema,inmigracion,47
+2026-04-12,tema,seguridad,90
+2026-04-12,tema,medioambiente,15
 2026-03-18,narrativa,corrupcion,8
 2026-03-19,narrativa,inseguridad,54
 2026-03-19,narrativa,crisis_economica,35
@@ -527,14 +527,14 @@ fecha,tipo,clave,total
 2026-04-11,narrativa,vivienda_emergencia,3
 2026-04-11,narrativa,ocupacion,9
 2026-04-11,narrativa,amnistia,5
-2026-04-12,narrativa,corrupcion,118
+2026-04-12,narrativa,corrupcion,149
 2026-04-12,narrativa,ocupacion,14
 2026-04-12,narrativa,crisis_economica,11
 2026-04-12,narrativa,crisis_territorial,13
 2026-04-12,narrativa,golpe_estado,13
 2026-04-12,narrativa,inmigracion_ilegal,5
-2026-04-12,narrativa,feminismo,7
-2026-04-12,narrativa,inseguridad,6
+2026-04-12,narrativa,feminismo,8
+2026-04-12,narrativa,inseguridad,7
 2026-04-12,narrativa,amnistia,1
 2026-03-18,partido,SUMAR,18
 2026-03-18,partido,ERC,33
@@ -859,16 +859,17 @@ fecha,tipo,clave,total
 2026-04-11,partido,Cs,8
 2026-04-11,partido,PNV,5
 2026-04-11,partido,MÁS MADRID,1
-2026-04-12,partido,PSOE,41
-2026-04-12,partido,ERC,116
-2026-04-12,partido,Cs,11
-2026-04-12,partido,VOX,16
-2026-04-12,partido,SUMAR,10
-2026-04-12,partido,PP,43
-2026-04-12,partido,CUP,27
-2026-04-12,partido,PODEMOS,10
-2026-04-12,partido,PNV,2
+2026-04-12,partido,PSOE,52
+2026-04-12,partido,ERC,162
+2026-04-12,partido,Cs,15
+2026-04-12,partido,VOX,17
+2026-04-12,partido,SUMAR,13
+2026-04-12,partido,PP,55
+2026-04-12,partido,CUP,36
+2026-04-12,partido,PODEMOS,16
+2026-04-12,partido,PNV,6
 2026-04-12,partido,EH BILDU,3
 2026-04-12,partido,BNG,1
-2026-04-12,partido,MÁS MADRID,1
+2026-04-12,partido,MÁS MADRID,2
 2026-04-12,partido,JUNTS,3
+2026-04-12,partido,CC,1
