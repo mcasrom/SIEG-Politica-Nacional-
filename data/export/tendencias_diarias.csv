@@ -321,6 +321,14 @@ fecha,tipo,clave,total
 2026-04-13,tema,sanidad,47
 2026-04-13,tema,medioambiente,20
 2026-04-13,tema,genero,75
+2026-04-14,tema,justicia,6
+2026-04-14,tema,inmigracion,3
+2026-04-14,tema,internacional,12
+2026-04-14,tema,vivienda,1
+2026-04-14,tema,politica,7
+2026-04-14,tema,genero,1
+2026-04-14,tema,otros,4
+2026-04-14,tema,educacion,1
 2026-03-18,narrativa,corrupcion,8
 2026-03-19,narrativa,inseguridad,54
 2026-03-19,narrativa,crisis_economica,35
@@ -558,6 +566,7 @@ fecha,tipo,clave,total
 2026-04-13,narrativa,vivienda_emergencia,5
 2026-04-13,narrativa,pucherazo,4
 2026-04-13,narrativa,amnistia,1
+2026-04-14,narrativa,corrupcion,2
 2026-03-18,partido,SUMAR,18
 2026-03-18,partido,ERC,33
 2026-03-18,partido,PP,55
@@ -908,3 +917,6 @@ fecha,tipo,clave,total
 2026-04-13,partido,JUNTS,12
 2026-04-13,partido,SALF,1
 2026-04-13,partido,CC,1
+2026-04-14,partido,PP,2
+2026-04-14,partido,PSOE,1
+2026-04-14,partido,ERC,13
