@@ -345,6 +345,15 @@ fecha,tipo,clave,total
 2026-04-15,tema,inmigracion,88
 2026-04-15,tema,otros,18
 2026-04-15,tema,medioambiente,32
+2026-04-16,tema,internacional,20
+2026-04-16,tema,genero,3
+2026-04-16,tema,vivienda,1
+2026-04-16,tema,seguridad,4
+2026-04-16,tema,politica,6
+2026-04-16,tema,educacion,1
+2026-04-16,tema,justicia,1
+2026-04-16,tema,inmigracion,5
+2026-04-16,tema,economia,1
 2026-03-18,narrativa,corrupcion,8
 2026-03-19,narrativa,inseguridad,54
 2026-03-19,narrativa,crisis_economica,35
@@ -980,3 +989,7 @@ fecha,tipo,clave,total
 2026-04-15,partido,SALF,1
 2026-04-15,partido,PNV,6
 2026-04-15,partido,MÁS MADRID,5
+2026-04-16,partido,PP,6
+2026-04-16,partido,ERC,10
+2026-04-16,partido,VOX,3
+2026-04-16,partido,PSOE,2
