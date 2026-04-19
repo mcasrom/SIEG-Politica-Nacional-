@@ -359,12 +359,12 @@ fecha,tipo,clave,total
 2026-04-18,tema,sanidad,73
 2026-04-18,tema,seguridad,131
 2026-04-18,tema,medioambiente,40
-2026-04-19,tema,sanidad,64
-2026-04-19,tema,internacional,308
-2026-04-19,tema,genero,121
-2026-04-19,tema,seguridad,77
-2026-04-19,tema,politica,185
-2026-04-19,tema,justicia,121
+2026-04-19,tema,sanidad,83
+2026-04-19,tema,internacional,416
+2026-04-19,tema,genero,133
+2026-04-19,tema,seguridad,87
+2026-04-19,tema,politica,241
+2026-04-19,tema,justicia,134
 2026-03-18,tema,politica,53
 2026-03-18,tema,internacional,102
 2026-03-18,tema,vivienda,4
@@ -387,12 +387,12 @@ fecha,tipo,clave,total
 2026-03-19,tema,medioambiente,74
 2026-03-19,tema,inmigracion,111
 2026-03-19,tema,sanidad,146
-2026-04-19,tema,inmigracion,91
-2026-04-19,tema,economia,121
-2026-04-19,tema,educacion,87
-2026-04-19,tema,vivienda,71
+2026-04-19,tema,inmigracion,94
+2026-04-19,tema,economia,140
+2026-04-19,tema,educacion,95
+2026-04-19,tema,vivienda,87
 2026-04-19,tema,medioambiente,27
-2026-04-19,tema,otros,8
+2026-04-19,tema,otros,12
 2026-03-20,narrativa,corrupcion,156
 2026-03-20,narrativa,crisis_territorial,9
 2026-03-20,narrativa,inmigracion_ilegal,13
@@ -668,7 +668,7 @@ fecha,tipo,clave,total
 2026-04-18,narrativa,feminismo,13
 2026-04-18,narrativa,vivienda_emergencia,4
 2026-04-18,narrativa,ocupacion,12
-2026-04-19,narrativa,corrupcion,103
+2026-04-19,narrativa,corrupcion,108
 2026-03-18,narrativa,corrupcion,5
 2026-03-19,narrativa,inseguridad,39
 2026-03-19,narrativa,crisis_economica,24
@@ -681,13 +681,13 @@ fecha,tipo,clave,total
 2026-03-19,narrativa,golpe_estado,15
 2026-03-19,narrativa,lawfare,6
 2026-03-19,narrativa,ocupacion,24
-2026-04-19,narrativa,inmigracion_ilegal,31
+2026-04-19,narrativa,inmigracion_ilegal,32
 2026-04-19,narrativa,lawfare,8
 2026-04-19,narrativa,inseguridad,20
 2026-04-19,narrativa,feminismo,16
 2026-04-19,narrativa,vivienda_emergencia,3
 2026-04-19,narrativa,ocupacion,6
-2026-04-19,narrativa,crisis_economica,2
+2026-04-19,narrativa,crisis_economica,3
 2026-04-19,narrativa,crisis_territorial,3
 2026-03-20,partido,ERC,212
 2026-03-20,partido,PSOE,63
@@ -1082,12 +1082,12 @@ fecha,tipo,clave,total
 2026-04-18,partido,JUNTS,9
 2026-04-18,partido,CC,1
 2026-04-18,partido,MÁS MADRID,2
-2026-04-19,partido,VOX,31
-2026-04-19,partido,ERC,116
-2026-04-19,partido,PP,78
-2026-04-19,partido,CUP,27
-2026-04-19,partido,SUMAR,6
-2026-04-19,partido,PSOE,27
+2026-04-19,partido,VOX,41
+2026-04-19,partido,ERC,158
+2026-04-19,partido,PP,100
+2026-04-19,partido,CUP,30
+2026-04-19,partido,SUMAR,11
+2026-04-19,partido,PSOE,46
 2026-03-18,partido,SUMAR,12
 2026-03-18,partido,PSOE,14
 2026-03-18,partido,ERC,17
@@ -1111,8 +1111,10 @@ fecha,tipo,clave,total
 2026-03-19,partido,EH BILDU,19
 2026-03-19,partido,BNG,2
 2026-03-19,partido,SALF,2
-2026-04-19,partido,Cs,15
-2026-04-19,partido,PODEMOS,16
-2026-04-19,partido,JUNTS,2
+2026-04-19,partido,Cs,19
+2026-04-19,partido,PODEMOS,21
+2026-04-19,partido,JUNTS,3
 2026-04-19,partido,PNV,3
 2026-04-19,partido,EH BILDU,3
+2026-04-19,partido,MÁS MADRID,2
+2026-04-19,partido,CC,1
