@@ -393,6 +393,18 @@ fecha,tipo,clave,total
 2026-04-19,tema,vivienda,87
 2026-04-19,tema,medioambiente,27
 2026-04-19,tema,otros,12
+2026-04-20,tema,vivienda,84
+2026-04-20,tema,internacional,228
+2026-04-20,tema,justicia,131
+2026-04-20,tema,politica,144
+2026-04-20,tema,otros,6
+2026-04-20,tema,economia,99
+2026-04-20,tema,educacion,80
+2026-04-20,tema,seguridad,62
+2026-04-20,tema,inmigracion,47
+2026-04-20,tema,genero,65
+2026-04-20,tema,sanidad,37
+2026-04-20,tema,medioambiente,16
 2026-03-20,narrativa,corrupcion,156
 2026-03-20,narrativa,crisis_territorial,9
 2026-03-20,narrativa,inmigracion_ilegal,13
@@ -689,6 +701,16 @@ fecha,tipo,clave,total
 2026-04-19,narrativa,ocupacion,6
 2026-04-19,narrativa,crisis_economica,3
 2026-04-19,narrativa,crisis_territorial,3
+2026-04-20,narrativa,ocupacion,17
+2026-04-20,narrativa,corrupcion,109
+2026-04-20,narrativa,inmigracion_ilegal,17
+2026-04-20,narrativa,crisis_economica,19
+2026-04-20,narrativa,crisis_territorial,17
+2026-04-20,narrativa,feminismo,9
+2026-04-20,narrativa,inseguridad,6
+2026-04-20,narrativa,golpe_estado,10
+2026-04-20,narrativa,amnistia,7
+2026-04-20,narrativa,vivienda_emergencia,4
 2026-03-20,partido,ERC,212
 2026-03-20,partido,PSOE,63
 2026-03-20,partido,SUMAR,61
@@ -1118,3 +1140,13 @@ fecha,tipo,clave,total
 2026-04-19,partido,EH BILDU,3
 2026-04-19,partido,MÁS MADRID,2
 2026-04-19,partido,CC,1
+2026-04-20,partido,CUP,28
+2026-04-20,partido,ERC,90
+2026-04-20,partido,PP,49
+2026-04-20,partido,PSOE,14
+2026-04-20,partido,VOX,18
+2026-04-20,partido,PODEMOS,12
+2026-04-20,partido,JUNTS,5
+2026-04-20,partido,SUMAR,9
+2026-04-20,partido,EH BILDU,7
+2026-04-20,partido,Cs,9
