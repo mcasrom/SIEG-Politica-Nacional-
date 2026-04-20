@@ -393,18 +393,18 @@ fecha,tipo,clave,total
 2026-04-19,tema,vivienda,87
 2026-04-19,tema,medioambiente,27
 2026-04-19,tema,otros,12
-2026-04-20,tema,vivienda,111
-2026-04-20,tema,internacional,418
-2026-04-20,tema,justicia,198
-2026-04-20,tema,politica,227
-2026-04-20,tema,otros,7
-2026-04-20,tema,economia,149
-2026-04-20,tema,educacion,103
-2026-04-20,tema,seguridad,83
-2026-04-20,tema,inmigracion,65
-2026-04-20,tema,genero,94
-2026-04-20,tema,sanidad,52
-2026-04-20,tema,medioambiente,18
+2026-04-20,tema,vivienda,143
+2026-04-20,tema,internacional,620
+2026-04-20,tema,justicia,276
+2026-04-20,tema,politica,337
+2026-04-20,tema,otros,16
+2026-04-20,tema,economia,190
+2026-04-20,tema,educacion,128
+2026-04-20,tema,seguridad,100
+2026-04-20,tema,inmigracion,86
+2026-04-20,tema,genero,122
+2026-04-20,tema,sanidad,63
+2026-04-20,tema,medioambiente,24
 2026-03-20,narrativa,corrupcion,156
 2026-03-20,narrativa,crisis_territorial,9
 2026-03-20,narrativa,inmigracion_ilegal,13
@@ -702,12 +702,12 @@ fecha,tipo,clave,total
 2026-04-19,narrativa,crisis_economica,3
 2026-04-19,narrativa,crisis_territorial,3
 2026-04-20,narrativa,ocupacion,17
-2026-04-20,narrativa,corrupcion,156
-2026-04-20,narrativa,inmigracion_ilegal,21
+2026-04-20,narrativa,corrupcion,208
+2026-04-20,narrativa,inmigracion_ilegal,23
 2026-04-20,narrativa,crisis_economica,22
-2026-04-20,narrativa,crisis_territorial,17
+2026-04-20,narrativa,crisis_territorial,19
 2026-04-20,narrativa,feminismo,9
-2026-04-20,narrativa,inseguridad,6
+2026-04-20,narrativa,inseguridad,9
 2026-04-20,narrativa,golpe_estado,10
 2026-04-20,narrativa,amnistia,7
 2026-04-20,narrativa,vivienda_emergencia,4
@@ -1140,15 +1140,17 @@ fecha,tipo,clave,total
 2026-04-19,partido,EH BILDU,3
 2026-04-19,partido,MÁS MADRID,2
 2026-04-19,partido,CC,1
-2026-04-20,partido,CUP,38
-2026-04-20,partido,ERC,161
-2026-04-20,partido,PP,101
-2026-04-20,partido,PSOE,32
-2026-04-20,partido,VOX,29
-2026-04-20,partido,PODEMOS,21
-2026-04-20,partido,JUNTS,11
-2026-04-20,partido,SUMAR,19
-2026-04-20,partido,EH BILDU,7
-2026-04-20,partido,Cs,15
-2026-04-20,partido,BNG,2
-2026-04-20,partido,PNV,1
+2026-04-20,partido,CUP,47
+2026-04-20,partido,ERC,234
+2026-04-20,partido,PP,166
+2026-04-20,partido,PSOE,62
+2026-04-20,partido,VOX,43
+2026-04-20,partido,PODEMOS,27
+2026-04-20,partido,JUNTS,19
+2026-04-20,partido,SUMAR,27
+2026-04-20,partido,EH BILDU,9
+2026-04-20,partido,Cs,19
+2026-04-20,partido,BNG,4
+2026-04-20,partido,PNV,2
+2026-04-20,partido,SALF,1
+2026-04-20,partido,CC,2
