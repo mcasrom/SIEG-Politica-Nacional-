@@ -441,6 +441,14 @@ fecha,tipo,clave,total
 2026-04-23,tema,sanidad,109
 2026-04-23,tema,seguridad,120
 2026-04-23,tema,medioambiente,17
+2026-04-24,tema,politica,11
+2026-04-24,tema,internacional,20
+2026-04-24,tema,economia,5
+2026-04-24,tema,justicia,4
+2026-04-24,tema,genero,4
+2026-04-24,tema,otros,3
+2026-04-24,tema,educacion,2
+2026-04-24,tema,sanidad,1
 2026-03-20,narrativa,corrupcion,156
 2026-03-20,narrativa,crisis_territorial,9
 2026-03-20,narrativa,inmigracion_ilegal,13
@@ -778,6 +786,7 @@ fecha,tipo,clave,total
 2026-04-23,narrativa,inseguridad,11
 2026-04-23,narrativa,ocupacion,23
 2026-04-23,narrativa,feminismo,4
+2026-04-24,narrativa,corrupcion,4
 2026-03-20,partido,ERC,212
 2026-03-20,partido,PSOE,63
 2026-03-20,partido,SUMAR,61
@@ -1260,3 +1269,9 @@ fecha,tipo,clave,total
 2026-04-23,partido,PNV,8
 2026-04-23,partido,Cs,15
 2026-04-23,partido,MÁS MADRID,2
+2026-04-24,partido,VOX,1
+2026-04-24,partido,PP,8
+2026-04-24,partido,ERC,10
+2026-04-24,partido,CUP,1
+2026-04-24,partido,PSOE,2
+2026-04-24,partido,SUMAR,1
