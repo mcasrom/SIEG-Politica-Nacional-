@@ -465,18 +465,18 @@ fecha,tipo,clave,total
 2026-03-26,tema,genero,235
 2026-03-26,tema,seguridad,164
 2026-03-26,tema,medioambiente,29
-2026-04-26,tema,politica,150
-2026-04-26,tema,internacional,210
-2026-04-26,tema,inmigracion,67
-2026-04-26,tema,economia,90
-2026-04-26,tema,vivienda,65
-2026-04-26,tema,justicia,138
-2026-04-26,tema,seguridad,71
-2026-04-26,tema,genero,96
-2026-04-26,tema,sanidad,44
-2026-04-26,tema,educacion,69
-2026-04-26,tema,medioambiente,19
-2026-04-26,tema,otros,3
+2026-04-26,tema,politica,222
+2026-04-26,tema,internacional,343
+2026-04-26,tema,inmigracion,72
+2026-04-26,tema,economia,113
+2026-04-26,tema,vivienda,73
+2026-04-26,tema,justicia,154
+2026-04-26,tema,seguridad,95
+2026-04-26,tema,genero,110
+2026-04-26,tema,sanidad,62
+2026-04-26,tema,educacion,89
+2026-04-26,tema,medioambiente,24
+2026-04-26,tema,otros,5
 2026-03-27,narrativa,inseguridad,12
 2026-03-27,narrativa,corrupcion,142
 2026-03-27,narrativa,feminismo,10
@@ -836,15 +836,16 @@ fecha,tipo,clave,total
 2026-03-26,narrativa,crisis_economica,8
 2026-03-26,narrativa,feminismo,3
 2026-03-26,narrativa,pucherazo,2
-2026-04-26,narrativa,inmigracion_ilegal,22
-2026-04-26,narrativa,corrupcion,116
+2026-04-26,narrativa,inmigracion_ilegal,24
+2026-04-26,narrativa,corrupcion,131
 2026-04-26,narrativa,crisis_territorial,13
 2026-04-26,narrativa,inseguridad,14
 2026-04-26,narrativa,ocupacion,13
 2026-04-26,narrativa,lawfare,5
 2026-04-26,narrativa,feminismo,4
 2026-04-26,narrativa,crisis_economica,3
-2026-04-26,narrativa,pucherazo,3
+2026-04-26,narrativa,pucherazo,7
+2026-04-26,narrativa,vivienda_emergencia,2
 2026-03-27,partido,PSOE,46
 2026-03-27,partido,PODEMOS,45
 2026-03-27,partido,PP,88
@@ -1354,15 +1355,15 @@ fecha,tipo,clave,total
 2026-03-26,partido,Cs,23
 2026-03-26,partido,BNG,4
 2026-03-26,partido,MÁS MADRID,2
-2026-04-26,partido,ERC,68
-2026-04-26,partido,PP,46
-2026-04-26,partido,VOX,21
-2026-04-26,partido,PSOE,20
-2026-04-26,partido,JUNTS,2
-2026-04-26,partido,PODEMOS,10
-2026-04-26,partido,SUMAR,8
-2026-04-26,partido,CUP,22
-2026-04-26,partido,EH BILDU,8
-2026-04-26,partido,Cs,7
-2026-04-26,partido,PNV,3
-2026-04-26,partido,MÁS MADRID,3
+2026-04-26,partido,ERC,128
+2026-04-26,partido,PP,73
+2026-04-26,partido,VOX,40
+2026-04-26,partido,PSOE,33
+2026-04-26,partido,JUNTS,4
+2026-04-26,partido,PODEMOS,13
+2026-04-26,partido,SUMAR,12
+2026-04-26,partido,CUP,31
+2026-04-26,partido,EH BILDU,10
+2026-04-26,partido,Cs,8
+2026-04-26,partido,PNV,5
+2026-04-26,partido,MÁS MADRID,4
